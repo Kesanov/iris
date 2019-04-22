@@ -1,3 +1,5 @@
+fs    = require 'fs'
+
 class Queue
 
   frnt: []
@@ -81,11 +83,54 @@ class GraphLayout
     queue.costs = @ranks
     for [n, r, _] from queue.iter()
       for t from @graph.iter n
-        if t not of @ranks or r >= @ranks[t]
+        if n != t and (t not of @ranks or r >= @ranks[t])
           queue.insert t, r-1, t
     # ADD NODES
     for i, _ of newnodes
       @nodes[i] = null
 
-g = new GraphLayout()
+
+class State
+
+  graph: null
+  input: null
+
+  constructor: (@input) ->
+    console.log graph
+    @graph = new GraphLayout()
+
+  iter: () ->
+    for transition from @input
+      console.log transition
+      for n in transition.remove.nodes
+        delete @graph.nodes[n]
+      for e in transition.remove.edges
+        delete @graph.edges[e]
+
+      @graph.step transition.insert.nodes, transition.insert.edges
+      yield @graph
+
+
+readCSV = (fileNodes, fileEdges) ->
+  nodes = ((s.replace(/\s+/g, '') for s in line.split(',')) for line in fs.readFileSync(fileNodes, 'utf8').split('\n'))
+  edges = ((s.replace(/\s+/g, '') for s in line.split(',')) for line in fs.readFileSync(fileEdges, 'utf8').split('\n'))
+  [n, e] = [1, 1]
+  while nodes[n++][0] != 'END' and edges[e++][0] != 'END'
+    t = {remove: {nodes: [], edges: []}, insert: {nodes: {}, edges: {}}}
+    while nodes[n][0] == 'remove'
+      t.remove.nodes.push nodes[n++][1]
+    while nodes[n][0] == 'insert'
+      t.insert.nodes[nodes[n][1]] = nodes[n][2]
+      n++
+    while edges[e][0] == 'remove'
+      t.remove.edges.push edges[e++][1]
+    while edges[e][0] == 'insert'
+      t.insert.edges[edges[e][1]] = [edges[e][2], edges[e][3]]
+      e++
+    yield t
+
+state = new State readCSV '../data/nodes.csv', '../data/edges.csv'
+
+for graph from state.iter()
+  console.log graph.ranks, graph.nodes, graph.edges
 
