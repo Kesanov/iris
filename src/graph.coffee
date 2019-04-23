@@ -96,12 +96,10 @@ class State
   input: null
 
   constructor: (@input) ->
-    console.log graph
     @graph = new GraphLayout()
 
   iter: () ->
     for transition from @input
-      console.log transition
       for n in transition.remove.nodes
         delete @graph.nodes[n]
       for e in transition.remove.edges
@@ -110,6 +108,7 @@ class State
       @graph.step transition.insert.nodes, transition.insert.edges
       yield @graph
 
+int = parseInt
 
 readCSV = (fileNodes, fileEdges) ->
   nodes = ((s.replace(/\s+/g, '') for s in line.split(',')) for line in fs.readFileSync(fileNodes, 'utf8').split('\n'))
@@ -118,19 +117,23 @@ readCSV = (fileNodes, fileEdges) ->
   while nodes[n++][0] != 'END' and edges[e++][0] != 'END'
     t = {remove: {nodes: [], edges: []}, insert: {nodes: {}, edges: {}}}
     while nodes[n][0] == 'remove'
-      t.remove.nodes.push nodes[n++][1]
+      t.remove.nodes.push int(nodes[n++][1])
     while nodes[n][0] == 'insert'
-      t.insert.nodes[nodes[n][1]] = nodes[n][2]
+      t.insert.nodes[int(nodes[n][1])] = nodes[n][2]
       n++
     while edges[e][0] == 'remove'
-      t.remove.edges.push edges[e++][1]
+      t.remove.edges.push int(edges[e++][1])
     while edges[e][0] == 'insert'
-      t.insert.edges[edges[e][1]] = [edges[e][2], edges[e][3]]
+      t.insert.edges[int(edges[e][1])] = [int(edges[e][2]), int(edges[e][3]), 0]
       e++
     yield t
 
-state = new State readCSV '../data/nodes.csv', '../data/edges.csv'
+state = new State readCSV '../data/test_nodes.csv', '../data/test_edges.csv'
 
 for graph from state.iter()
-  console.log graph.ranks, graph.nodes, graph.edges
+  fs.writeFileSync '../data/graphlayout.json', JSON.stringify
+    'ranks': graph.ranks
+    'edges': graph.edges
+    'nodes': graph.nodes
+  break
 

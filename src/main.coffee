@@ -3,6 +3,7 @@ import {circle, rect, plane} from 'basegl/display/Shape'
 import * as Color from 'basegl/display/Color'
 import {group} from 'basegl/display/Symbol'
 import {KeyboardMouseReactor} from 'basegl/navigation/EventReactor'
+import {graph} from 'layoutData'
 
 G = 30
 
@@ -38,9 +39,9 @@ addLine = ([ys, xs], [yt, xt]) ->
   line.position.xy = [G*xs+G/6, G*ys+G/6]
   line
 
-addNode [5,5]
-addNode [4,4]
-addNode [3,5]
-addEdge [5,5], [4,4], -1
-addEdge [5,5], [3,5],  0
-addEdge [4,4], [3,5],  0
+console.log graph
+
+for _, pos of graph.nodes
+  addNode pos
+for _, [s, t, offset] of graph.edges
+  addEdge graph.nodes[s], graph.nodes[t], offset
