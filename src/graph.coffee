@@ -73,13 +73,13 @@ class GraphLayout
       @edges[i] = e
     # INIT RANKS
     for n, _ of newnodes
+      @ranks[n] = 0
       for t from @graph.iter n
         if t of @nodes
-          rank = if n of @ranks then @ranks[n] else 0
           @ranks[n] = Math.min rank, @ranks[t]-1
     @ranks[0] = 0
     # ADD RANKS
-    queue = new UniqueQueue Queue, ([n, @ranks[n], n] for n, _ of newnodes when n of @ranks)
+    queue = new UniqueQueue Queue, ([n, @ranks[n], n] for n, _ of newnodes)
     queue.costs = @ranks
     for [n, r, _] from queue.iter()
       for t from @graph.iter n
@@ -87,7 +87,7 @@ class GraphLayout
           queue.insert t, r-1, t
     # ADD NODES
     for i, _ of newnodes
-      @nodes[i] = null
+      @nodes[i] = [null, null]
 
 
 class State
@@ -128,11 +128,12 @@ readCSV = (fileNodes, fileEdges) ->
       e++
     yield t
 
-state = new State readCSV '../data/test_nodes.csv', '../data/test_edges.csv'
+state = new State readCSV '../data/nodes.csv', '../data/edges.csv'
+
 
 for graph from state.iter()
+  graph.nodes[n][0] = r for n, r of graph.ranks
   fs.writeFileSync '../data/graphlayout.json', JSON.stringify
-    'ranks': graph.ranks
     'edges': graph.edges
     'nodes': graph.nodes
   break
