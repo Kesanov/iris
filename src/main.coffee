@@ -23,9 +23,9 @@ addNode = ([y, x]) ->
 
 addEdge = ([ys, xs], [yt, xt], offset) ->
   line1 = addLine [ys,xs], [ys,xs+offset]
-  line2 = addLine [yt+.5,xs+offset], [yt+.5,xt]
-  line3 = addLine [ys,xs+offset], [yt+.5,xs+offset]
-  line4 = addLine [yt+.5, xt], [yt, xt]
+  line2 = addLine [yt+.3,xs+offset], [yt+.3,xt]
+  line3 = addLine [ys,xs+offset], [yt+.3,xs+offset]
+  line4 = addLine [yt+.3, xt], [yt, xt]
   group [line1, line2, line3, line4]
 
 addLine = ([ys, xs], [yt, xt]) ->
@@ -46,5 +46,4 @@ for _, pos of graph.nodes
 for _, pos of graph.nodes
   addNode pos
 for _, [s, t, offset] of graph.edges
-  [s, t] = [t, s] if graph.nodes[s][0] < graph.nodes[t][0]
   addEdge graph.nodes[s], graph.nodes[t], offset

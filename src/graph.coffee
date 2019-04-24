@@ -128,11 +128,14 @@ readCSV = (fileNodes, fileEdges) ->
       e++
     yield t
 
-state = new State readCSV '../data/nodes.csv', '../data/edges.csv'
+state = new State readCSV '../data/test_nodes.csv', '../data/test_edges.csv'
 
 
 for graph from state.iter()
   graph.nodes[n][0] = r for n, r of graph.ranks
+  for e, [s,t,o] of graph.edges
+    graph.edges[e]  = [t,s,o] if graph.nodes[s][0] < graph.nodes[t][0]
+
   fs.writeFileSync '../data/graphlayout.json', JSON.stringify
     'edges': graph.edges
     'nodes': graph.nodes

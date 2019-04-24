@@ -53,11 +53,11 @@ def main(graph):
     for e1, (s1, t1, _) in graph.edge.items():
         for e2, (s2, t2, _) in graph.edge.items():
             if graph.node[s1][y] > graph.node[s2][y] > graph.node[t1][y]:
-                # crossY = [node[t1,y] - node[s2,y] -1, node[t2,y] - node[t1,y] -1]
                 e1GTs2 = node[s1] + edge[e1] - node[s2]
+                e1GTt2 = node[s1] + edge[e1] - node[t2]
 
-                m.addConstr(imp(f'R {e1} {e2}', [ edge[e1]], [ e1GTs2 -1]))
-                m.addConstr(imp(f'L {e1} {e2}', [-edge[e1]], [-e1GTs2 -1]))
+                m.addConstr(imp(f'R {e1} {e2}', [ edge[e2],  e1GTs2], [ e1GTt2 -1]))
+                m.addConstr(imp(f'L {e1} {e2}', [-edge[e2], -e1GTs2], [-e1GTt2 -1]))
     # s.x > e.x > t.x
     for e, (s, t, _) in graph.edge.items():
         tGTs = node[t] - node[s]
