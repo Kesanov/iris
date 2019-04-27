@@ -1,6 +1,8 @@
 fs    = require 'fs'
 
 clone = (obj) => JSON.parse JSON.stringify obj
+sort  = (a,f) => a.sort (a, b) => f(a) - f(b)
+last  = (arr) => arr[arr.length - 1]
 
 chain = (args) ->
   for arg from args when arg
@@ -67,9 +69,12 @@ class Graph
 
   constructor: (@edges = {}, @rdges = {}) ->
 
+  addNode: (n) =>
+    if n not of @edges
+      @edges[n] = []
+      @rdges[n] = []
+
   addEdge: (s, t) =>
-    if s not of @edges then @edges[s] = []
-    if t not of @rdges then @rdges[t] = []
     @edges[s].push t
     @rdges[t].push s
 
@@ -97,6 +102,9 @@ class GraphLayout
   step: (newnodes, newedges) =>
     graph = new Graph()
     # ADD EDGES
+    for n, _ of newnodes
+      graph.addNode n
+      @graph.addNode n
     for i, e of newedges
       graph.addEdge e[0], e[1]
       @edges[i] = e
@@ -119,26 +127,45 @@ class GraphLayout
       [s,t] = [t,s] if @ranks[s] < @ranks[t]
       @graph.addEdge s, t
       @edges[e] = [s,t,o]
+    for n, _ of @ranks
+      sort @graph.edges[n], (a) => @graph.rdges[a].length
+      sort @graph.rdges[n], (a) => @graph.rdges[a].length
+
     # ADD NODES
     for i, _ of newnodes
       @nodes[i] = [null, null]
 
   layout: () =>
+    [xs, ys, x, y] = [[], [], 0, 0]
     queue = new UniqueQueue Stack, ([n, 1, 1] for n, r of @ranks when r == 0)
-    x = 0
     for [n, _, _] from queue.iter()
       @nodes[n][1] = x++
-      if n of @graph.edges
-        for t from @graph.edges[n]
-          queue.insert t, 1, 1 if @graph.rdges[t][@graph.rdges[t].length - 1] == parseInt(n)
-    y = 0
+      xs.push n
+      for t from @graph.edges[n]
+        queue.insert t, 1, 1 if @graph.rdges[t][0] == parseInt(n)
     queue = new UniqueQueue Stack, ([n, 1, 1] for n, r of @ranks when r == 0)
     queue.queue.stack = queue.queue.stack.reverse()
     for [n, _, _] from queue.iter()
       @nodes[n][0] = y++
-      if n of @graph.edges
-        for t from @graph.edges[n].reverse()
-          queue.insert t, 1, 1 if @graph.rdges[t][@graph.rdges[t].length - 1] == parseInt(n)
+      ys.push n
+      for t from @graph.edges[n].reverse()
+        queue.insert t, 1, 1 if last(@graph.rdges[t]) == parseInt(n)
+    [x, y] = [0, 0]
+    nx = {}
+    @nodes[xs[0]][1] = 0
+    @nodes[ys[0]][0] = 0
+    for i in [0..xs.length-2]
+      x++ if @nodes[xs[i]][0] > @nodes[xs[i+1]][0] or @graph.edges[xs[i]] == 1 and @graph.rdges[xs[i+1]] == 1
+      nx[xs[i+1]] = x
+    for i in [0..ys.length-2]
+      y++ if @nodes[ys[i]][1] > @nodes[ys[i+1]][1] or @graph.edges[ys[i]] == 1 and @graph.rdges[ys[i+1]] == 1
+      @nodes[ys[i+1]][0] = y
+    for n, x of nx
+      @nodes[n][1] = x
+
+    for n, pos of @nodes
+      pos[1] = pos[1] - pos[0]
+      pos[0] = pos[1] + pos[0] * 2
 
 class State
 
