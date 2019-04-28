@@ -3,6 +3,7 @@ fs    = require 'fs'
 clone = (obj) => JSON.parse JSON.stringify obj
 sort  = (a,f) => a.sort (a, b) => f(a) - f(b)
 last  = (arr) => arr[arr.length - 1]
+uniq  = (arr) => arr[i] for i in [0..arr.length-1] when arr[i] != arr[i+1]
 
 chain = (args) ->
   for arg from args when arg
@@ -42,18 +43,21 @@ class UniqueQueue
   costs: {}
   items: {}
 
-  constructor: (queue, items) ->
-    @costs = {}
+  constructor: (queue, costs, items) ->
     @items = {}
-    @queue  = new queue()
+    @costs = costs
+    @queue = new queue()
     for [name, cost, item] in items
       @insert name, cost, item
     return this
 
-  insert: (name, cost, item) => if name not of @costs or cost < @costs[name]
+  reinsert: (name, cost, item = null) =>
     @queue.insert [name, cost]
-    @costs[name] = cost
     @items[name] = item
+    @costs[name] = cost
+
+  insert: (name, cost, item = null) =>
+    @reinsert name, cost, item  if name not of @costs or cost < @costs[name]
 
   iter: () ->
     while not @queue.empty()
@@ -91,18 +95,32 @@ class Graph
 
 class GraphLayout
 
+  sourc: []
   ranks: {}
   nodes: {}
   edges: {}
   reach: {}
   graph: null
 
-  constructor: (@ranks = {}, @nodes = {}, @edges = {}) ->
+  constructor: (@sourc = [0], @ranks = {0: 0}, @nodes = {}, @edges = {}) ->
     @graph = new Graph()
 
-  step: (newnodes, newedges) =>
+  step: (newnodes, newedges, layout = true) =>
+    sourc = []
     graph = new Graph()
-    # ADD EDGES
+
+    @addEdges graph, newnodes, newedges
+    @getRanks graph, newedges
+    @orientEdges graph, newedges
+
+    console.log ([n, @ranks[n]] for n of newnodes)
+
+    for i, _ of newnodes
+      @nodes[i] = [null, null]
+
+    @dominanceLayout() if layout
+
+  addEdges: (graph, newnodes, newedges) =>
     for n, _ of newnodes
       graph.addNode n
       @graph.addNode n
@@ -111,24 +129,23 @@ class GraphLayout
       graph.addNode t if t not of newnodes
       graph.addEdge s, t
       @edges[i] = [s, t, o]
-    # INIT RANKS
-    for n, _ of newnodes
-      rank = 0
-      for t from graph.adges n
-        if rank >= @ranks[t]
-          rank = @ranks[t]-1
-      @ranks[n] = rank if rank < 0
-    if 0 not of @graph.edges
-      new Error('Graph must containt node with id = 0!')
-    @ranks[0] = 0
-    # ADD RANKS
-    queue = new UniqueQueue Queue, ([n, @ranks[n], n] for n, _ of newnodes when n of @ranks)
-    queue.costs = @ranks
-    for [n, r, _] from queue.iter()
-      for t from chain [graph.edges[n], graph.adges n]
-        if n != t and (t not of @ranks or r == @ranks[t])
-          queue.insert t, r-1, t
-    # ORIENT EDGES
+
+  getRanks: (graph, newedges) =>
+    queue = new UniqueQueue Queue, @ranks, []
+    nodes = []
+    for _, [s,t] of newedges
+      nodes.push(s) if s of @ranks
+      nodes.push(t) if t of @ranks
+    nodes = uniq(sort nodes, (n) => -@ranks[n])
+    console.log "HERE", nodes
+    for n in nodes
+      queue.reinsert n, @ranks[n]
+      for [n, r, _] from queue.iter()
+        for t from chain [@graph.edges[n], graph.adges n]
+          if n != t and (t not of @ranks or r == @ranks[t])
+            queue.insert t, r-1
+
+  orientEdges: (graph, newedges) =>
     for e, [s,t,o] of newedges when s != t
       [s,t] = [t,s] if @ranks[s] < @ranks[t]
       @graph.addEdge s, t
@@ -136,49 +153,49 @@ class GraphLayout
     for n, _ of @ranks
       sort @graph.edges[n], (a) => @graph.rdges[a].length + 1/a
       sort @graph.rdges[n], (a) => @graph.rdges[a].length + 1/a
-    # ADD NODES
-    for i, _ of newnodes
-      @nodes[i] = [null, null]
-    # INIT REACH (PARALLEL PATHS)
-
-    # ADD REACH
 
 
-#    console.log ([n, @ranks[n]] for n,_ of newnodes)
-  layout: () =>
+  dominanceLayout: () =>
     # PRELIMINARY
     [remains, xs, ys, x, y] = [[], [], [], 0, 0]
-    queue = new UniqueQueue Stack, ([n, 1, 1] for n, r of @ranks when r == 0)
-    console.log @ranks, queue.queue.stack
+    queue = new UniqueQueue Stack, {}, ([n, 2, 2] for n in @sourc)
+#    console.log @ranks, @sourc, queue.queue.stack
     for n, _ of @nodes
       remains[n] = @graph.rdges[n].length
     for [n, _, _] from queue.iter()
       @nodes[n][1] = x++
       xs.push n
-      console.log n, @graph.edges[n]
       for t from @graph.edges[n]
-        queue.insert t, 1, 1 if --remains[t] == 0
-    queue = new UniqueQueue Stack, ([n, 1, 1] for n, r of @ranks when r == 0)
-    queue.queue.stack = queue.queue.stack.reverse()
+        queue.insert t, 1 if --remains[t] == 0
+    queue = new UniqueQueue Stack, {}, ([n, 2, 2] for n in @sourc.reverse())
     for n, _ of @nodes
       remains[n] = @graph.rdges[n].length
     for [n, _, _] from queue.iter()
       @nodes[n][0] = y++
       ys.push n
       for t from @graph.edges[n].reverse()
-        queue.insert t, 1, 1 if --remains[t] == 0
+        queue.insert t, 1 if --remains[t] == 0
 
     # COMPACTION
-    for n, pos of @nodes
-#      pos[1] = pos[1] - pos[0]
-      pos[0] = @ranks[n] #pos[1] + pos[0] * 2
-#    [x, xs] = [0, sort (n for n,[_,x] of @nodes when x <= 0), (n) => -@nodes[n][1]]
-#    for i in [0..xs.length-2]
-#      @nodes[xs[i+1]][1] = if int(xs[i+1]) in @graph.edges[xs[i]] then x else --x
-    ns = sort (n for n,[_,x] of @nodes when x > 0), (n) => @nodes[n][1]
-    xs = (-1 for _ of @nodes)
-    for n in ns
-      @nodes[n][1] = xs[-@ranks[n]] = Math.max xs[-@ranks[n]-1], xs[-@ranks[n]]+1
+#    for n, pos of @nodes
+##      pos[1] = pos[1] - pos[0]
+#      pos[0] = @ranks[n] #pos[1] + pos[0] * 2
+##    [x, xs] = [0, sort (n for n,[_,x] of @nodes when x <= 0), (n) => -@nodes[n][1]]
+##    for i in [0..xs.length-2]
+##      @nodes[xs[i+1]][1] = if int(xs[i+1]) in @graph.edges[xs[i]] then x else --x
+#    ns = sort (n for n,[_,x] of @nodes when x > 0), (n) => @nodes[n][1]
+#    xs = (-1 for _ of @nodes)
+#    for n in ns
+#      @nodes[n][1] = xs[-@ranks[n]] = Math.max xs[-@ranks[n]-1], xs[-@ranks[n]]+1
+
+  write: () =>
+    file = fs.openSync('./layoutdata.coffee', 'w')
+    fs.writeSync(file, "export graph =\n")
+    fs.writeSync(file, "  nodes:\n")
+    fs.writeSync(file, "    " + n + " : [" + d + "]\n") for n, d of @nodes
+    fs.writeSync(file, "  edges:\n")
+    fs.writeSync(file, "    " + e + " : [" + d + "]\n") for e, d of @edges
+    fs.closeSync(file)
 
 class State
 
@@ -230,16 +247,7 @@ state = new State readCSV '../data/27f'
 
 i=0
 for graph from state.iter()
-  if i++ == 3
-    graph.nodes[n][0] = r for n, r of graph.ranks
-    graph.layout()
-
-    file = fs.openSync('./layoutdata.coffee', 'w')
-    fs.writeSync(file, "export graph =\n")
-    fs.writeSync(file, "  nodes:\n")
-    fs.writeSync(file, "    " + n + " : [" + d + "]\n") for n, d of graph.nodes
-    fs.writeSync(file, "  edges:\n")
-    fs.writeSync(file, "    " + e + " : [" + d + "]\n") for e, d of graph.edges
-    fs.closeSync(file)
+  if i++ == 1
+    graph.write()
     break
 
