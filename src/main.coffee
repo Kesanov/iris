@@ -7,21 +7,13 @@ import {graph} from 'layoutdata'
 
 G = 15
 
-scene = basegl.scene
-  domElement: 'scene'
-  width: 2048
-  height: 2048
-
-
-eventReactor = new KeyboardMouseReactor scene
-
 addNode = (n, [y, x]) ->
   r = G/6
 #  name = basegl.text {str: "HELLO", scene: scene, fontFamily: 'SourceCodePro', size: 16}
   node = scene.add basegl.symbol basegl.expr -> circle(r).move(r, r)
   node.bbox.xy = [2*r, 2*r]
   node.position.xy = [G*x, G*y]
-  node.addEventListener "mouseover", (e) -> console.log "OVER NODE!"
+  node.addEventListener "mouseover", (e) => alert "Node: " + n
   group [node]
 
 addEdge = ([ys, xs], [yt, xt], offset) ->
@@ -49,9 +41,24 @@ addLine = ([ys, xs], [yt, xt]) ->
   line
 
 
-for _, pos of graph.nodes
-  pos[1] += 50
-for n, pos of graph.nodes
-  addNode n, pos
-for _, [s, t, offset] of graph.edges
-  addLine graph.nodes[s], graph.nodes[t]
+main = () ->
+  basegl.fontManager.register 'SourceCodePro', 'fonts/SourceCodePro.ttf'
+  await basegl.fontManager.load 'SourceCodePro'
+
+  eventReactor = new KeyboardMouseReactor scene
+
+  for _, pos of graph.nodes
+    pos[1] += 50
+    pos[0] += 60
+  for _, [s, t, offset] of graph.edges
+    addLine graph.nodes[s], graph.nodes[t]
+  for n, pos of graph.nodes
+    addNode n, pos
+
+
+scene = basegl.scene
+  domElement: 'scene'
+  width: 2048
+  height: 2048
+
+main()
