@@ -16,7 +16,7 @@ class Stack
 
   constructor: (@stack = []) ->
 
-  empty:  ( ) => @stack.length == 0
+  empty : ( ) => @stack.length == 0
   insert: (x) => @stack.push x
   remove: ( ) => @stack.pop()
 
@@ -27,10 +27,8 @@ class Queue
 
   constructor: (@frnt = [], @back = []) ->
 
-  empty: ( ) =>
-    @frnt.length == 0 and @back.length == 0
-  insert: (x) =>
-    @back.push x
+  empty : ( ) => @frnt.length == 0 and @back.length == 0
+  insert: (x) => @back.push x
   remove: ( ) =>
     if @frnt.length == 0
       @frnt = @back.reverse()
@@ -95,28 +93,26 @@ class Graph
 
 class GraphLayout
 
+  label: {}
   sourc: []
   ranks: {}
   nodes: {}
   edges: {}
-  reach: {}
   graph: null
 
   constructor: (@sourc = [0], @ranks = {0: 0}, @nodes = {}, @edges = {}) ->
     @graph = new Graph()
 
   step: (newnodes, newedges, layout = true) =>
-    sourc = []
     graph = new Graph()
 
     @addEdges graph, newnodes, newedges
-    @getRanks graph, newedges
+    @rankNodes graph, newedges
     @orientEdges graph, newedges
 
-    console.log ([n, @ranks[n]] for n of newnodes)
-
-    for i, _ of newnodes
+    for i, [label] of newnodes
       @nodes[i] = [null, null]
+      @label[i] = label
 
     @dominanceLayout() if layout
 
@@ -130,14 +126,13 @@ class GraphLayout
       graph.addEdge s, t
       @edges[i] = [s, t, o]
 
-  getRanks: (graph, newedges) =>
+  rankNodes: (graph, newedges) =>
     queue = new UniqueQueue Queue, @ranks, []
     nodes = []
     for _, [s,t] of newedges
       nodes.push(s) if s of @ranks
       nodes.push(t) if t of @ranks
     nodes = uniq(sort nodes, (n) => -@ranks[n])
-    console.log "HERE", nodes
     for n in nodes
       queue.reinsert n, @ranks[n]
       for [n, r, _] from queue.iter()
@@ -172,30 +167,43 @@ class GraphLayout
       remains[n] = @graph.rdges[n].length
     for [n, _, _] from queue.iter()
       @nodes[n][0] = y++
+#      @nodes[n][0] = y++ if @trans[n]
       ys.push n
       for t from @graph.edges[n].reverse()
         queue.insert t, 1 if --remains[t] == 0
 
     # COMPACTION
+    [x, ns] = [0, sort (n for n, _ of @nodes), (n) => @nodes[n][1]]
+    for i in [0..ns.length-2]
+      @nodes[ns[i+1]][1] = if int(ns[i+1]) == @graph.edges[ns[i]][0] then x else ++x
+
+    for n, _ of @nodes when @graph.edges[n].length == 0
+      @nodes[n][0] = 1 + Math.max.apply null, (@nodes[s][0] for s in @graph.rdges[n])
+
+    ns = sort (n for n, _ of @nodes), (n) => @nodes[n][0]
+    ys = (-1 for n, _  of @nodes)
+    for n in sort (n for n, _ of @nodes), (n) => @nodes[n][0]
+      parentY = Math.max.apply null, (@nodes[s][0] for s in @graph.rdges[n])
+      ys[@nodes[n][1]] = @nodes[n][0] = 1 + Math.max parentY, ys[@nodes[n][1]]
+#
 #    for n, pos of @nodes
-##      pos[1] = pos[1] - pos[0]
-#      pos[0] = @ranks[n] #pos[1] + pos[0] * 2
-##    [x, xs] = [0, sort (n for n,[_,x] of @nodes when x <= 0), (n) => -@nodes[n][1]]
-##    for i in [0..xs.length-2]
-##      @nodes[xs[i+1]][1] = if int(xs[i+1]) in @graph.edges[xs[i]] then x else --x
-#    ns = sort (n for n,[_,x] of @nodes when x > 0), (n) => @nodes[n][1]
-#    xs = (-1 for _ of @nodes)
-#    for n in ns
-#      @nodes[n][1] = xs[-@ranks[n]] = Math.max xs[-@ranks[n]-1], xs[-@ranks[n]]+1
+#      pos[1] = pos[1] - pos[0]
+#      pos[0] = pos[1] + 2*pos[0]
 
   write: () =>
     file = fs.openSync('./layoutdata.coffee', 'w')
-    fs.writeSync(file, "export graph =\n")
-    fs.writeSync(file, "  nodes:\n")
-    fs.writeSync(file, "    " + n + " : [" + d + "]\n") for n, d of @nodes
-    fs.writeSync(file, "  edges:\n")
-    fs.writeSync(file, "    " + e + " : [" + d + "]\n") for e, d of @edges
-    fs.closeSync(file)
+    fs.writeSync file, "export graph =\n"
+    fs.writeSync file, "  styles:\n"
+    labels = uniq (l for _, l of @label).sort()
+    for label, i in labels
+      fs.writeSync file, "    #{label}: {hsl: [#{i/(labels.length-1)},1,.5]}\n"
+    fs.writeSync file, "  nodes:\n"
+    for n, [y, x] of @nodes
+      fs.writeSync file, "    #{n} : {y: #{y}, x: #{x}, rank: #{@ranks[n]}, label: '#{@label[n]}'}\n"
+    fs.writeSync file, "  edges:\n"
+    for e, [s, t] of @edges
+      fs.writeSync file, "    #{e} : {s: #{s}, t: #{t}}\n"
+    fs.closeSync file
 
 class State
 
@@ -234,7 +242,7 @@ readCSV = (file) ->
     while nodes[n][0] == 'remove'
       t.remove.nodes.push int(nodes[n++][1])
     while nodes[n][0] == 'insert'
-      t.insert.nodes[int(nodes[n][1])] = nodes[n][2]
+      t.insert.nodes[int(nodes[n][1])] = [nodes[n][2]]
       n++
     while edges[e][0] == 'remove'
       t.remove.edges.push int(edges[e++][1])
@@ -243,11 +251,11 @@ readCSV = (file) ->
       e++
     yield t
 
-state = new State readCSV '../data/27f'
+state = new State readCSV '../data/q'
 
 i=0
 for graph from state.iter()
-  if i++ == 1
+  if i++ == 0
     graph.write()
     break
 

@@ -5,24 +5,39 @@ import json
 class GraphLayout:
 
     def __init__(self):
-        self.node = {} # id: (y,x)
+        self.styl = [] # label: style
+        self.node = {} # id: (y,x,rank,label)
         self.edge = {} # id: (s,t,offset)
 
     @classmethod
-    def loadJson(cls, file):
-        data = json.loads(open(file, 'r').read())
+    def loadCoffee(cls, file):
+        data = (line for line in open(file, 'r'))
         grph = cls()
-        grph.node = {int(k): tuple(v) for k,v in data['nodes'].items()}
-        grph.edge = {int(k): tuple(v) for k,v in data['edges'].items()}
+        next(data)
+        next(data)
+        for line in data:
+            if 'nodes:' in line: break
+            grph.styl.append(line)
+        for line in data:
+            if 'edges:' in line: break
+            line = line.split(':')
+            [y,x,r,l] = [l.split(',')[0].split('}')[0] for l in line[2:]]
+            grph.node[int(line[0])] = int(y), int(x), int(r), l
+        for line in data:
+            line = line.split(':')
+            [s,t] = [l.split(',')[0].split('}')[0] for l in line[2:]]
+            grph.edge[int(line[0])] = int(s), int(t), 0
         return grph
 
     def saveCoffee(self, file):
         f = open(file, 'w')
         print('export graph =', file=f)
+        print('  styles:', file=f)
+        for s in self.styl: print(s, file=f, end='')
         print('  nodes:', file=f)
-        for k, v in self.node.items(): print(f'    {k}: {list(v)}', file=f)
+        for k, (y,x,r,l) in self.node.items(): print(f'    {k}: {{y:{y}, x:{x}, rank:{r}, label:{l}}}', file=f)
         print('  edges:', file=f)
-        for k, v in self.edge.items(): print(f'    {k}: {list(v)}', file=f)
+        for k, (s,t,o)   in self.edge.items(): print(f'    {k}: {{s:{s}, t:{t}}}', file=f)
 
 # exact, but slow grid layout algorithm
 def main(graph):
@@ -78,7 +93,7 @@ def main(graph):
 
     # - set objective : change in node position + total edge length
     m.setObjective(
-        sum(abs(node[n] - x)       for n, (_, x) in graph.node.items() if x is not None)+
+        # sum(abs(node[n] - x)       for n, (_, x, _, _) in graph.node.items() if x is not None)+
         sum(abs(node[s] - node[t]) for s, t, _   in graph.edge.values()),
         g.GRB.MINIMIZE,
     )
@@ -88,13 +103,13 @@ def main(graph):
 
     m.optimize()
 
-    for n in graph.node: graph.node[n] = graph.node[n][y], int(round(node[n].X))
+    for n in graph.node: graph.node[n] = graph.node[n][y], int(round(node[n].X)), graph.node[n][2], graph.node[n][3]
     for e in graph.edge: graph.edge[e] = graph.edge[e][0], graph.edge[e][1], int(round(edge[e].X))
     print(graph.node)
     print({e: edge[e].X for e in graph.edge})
     print({var.VarName: int(round(var.X)) for var in m.getVars()})
 
 if __name__ == '__main__':
-    grph = GraphLayout.loadJson('../data/graphlayout.json')
+    grph = GraphLayout.loadCoffee('./layoutdata.coffee')
     main(grph)
-    grph.saveCoffee('./layoutData.coffee')
+    grph.saveCoffee('./layoutdata.coffee')

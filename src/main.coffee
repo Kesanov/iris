@@ -5,39 +5,40 @@ import {group} from 'basegl/display/Symbol'
 import {KeyboardMouseReactor} from './EventReactor'
 import {graph} from 'layoutdata'
 
-G = 15
+G = 30
 
-addNode = (n, [y, x]) ->
+addNode = (n, {y, x, rank, label}, hsl) ->
   r = G/6
-#  name = basegl.text {str: "HELLO", scene: scene, fontFamily: 'SourceCodePro', size: 16}
-  node = scene.add basegl.symbol basegl.expr -> circle(r).move(r, r)
+#  name = basegl.tet.x {str: "HELLO", scene: scene, fontFamily: 'SourceCodePro', size: 16}
+  src = addLine {y: y, x: x}, {y: y+.3, x: x}
+  trg = addLine {y: y, x: x}, {y: y-.3, x: x}
+  node = scene.add basegl.symbol basegl.expr -> circle(r).move(r, r).fill(Color.hsl hsl)
   node.bbox.xy = [2*r, 2*r]
   node.position.xy = [G*x, G*y]
-  node.addEventListener "mouseover", (e) => alert "Node: " + n
-  group [node]
+  node.addEventListener "mouseover", (e) => alert "Node: id:#{n}, label: #{label}"
 
-addEdge = ([ys, xs], [yt, xt], offset) ->
-  line1 = addLine [ys,xs], [ys,xs+offset]
-  line2 = addLine [yt+.3,xs+offset], [yt+.3,xt]
-  line3 = addLine [ys,xs+offset], [yt+.3,xs+offset]
-  line4 = addLine [yt+.3, xt], [yt, xt]
-  group [line1, line2, line3, line4]
+  group [node, src, trg]
 
-addLine = ([ys, xs], [yt, xt]) ->
-  pi = if xs > xt then Math.PI else 0
+addEdge = (s, t, offset) ->
+  line1 = addLine {y: s.y-.3, x: s.x}       , {y: s.y-.3, x: s.x+offset}
+  line2 = addLine {y: s.y-.3, x: s.x+offset}, {y: t.y+.3, x: s.x+offset}
+  line3 = addLine {y: t.y+.3, x: s.x+offset}, {y: t.y+.3, x: t.x}
+  group [line1, line2, line3]
 
-  size = Math.sqrt (Math.pow G*xs-G*xt, 2) + (Math.pow G*ys-G*yt, 2)
-  line = scene.add basegl.symbol basegl.expr -> rect(1.5*size, G/10)
-  line.bbox.xy = [1.2*size, G/10]
+addLine = (s, t) ->
+  pi = if s.x > t.x then Math.PI else 0
 
-  srce = scene.add basegl.symbol basegl.expr -> rect(0.8*size, G/10).fill(Color.rgb [0.8,0.3,0,.5])
-  srce.bbox.xy = [.8*size, G/10]
-  srce.position.xy = [0.6*size, 0]
+  size = 2 + 2* Math.sqrt (Math.pow G*s.x-G*t.x, 2) + (Math.pow G*s.y-G*t.y, 2)
+  src = scene.add basegl.symbol basegl.expr -> rect(size, G/10)
+  src.bbox.xy = [size, G/10]
 
-  line = group [line, srce]
-  line.rotation.z = pi + Math.atan (yt-ys) / (xt-xs)
+  line = group [src]
+
+  src.position.x = Math.ceil src.position.x - G*.035
+  src.position.y = Math.ceil src.position.y - G*.035
+  line.rotation.z = pi + Math.atan (t.y-s.y) / (t.x-s.x)
   line = group [line]
-  line.position.xy = [G*xs+G/6, G*ys+G/6]
+  line.position.xy = [G*s.x+G/6, G*s.y+G/6]
   line
 
 
@@ -45,15 +46,26 @@ main = () ->
   basegl.fontManager.register 'SourceCodePro', 'fonts/SourceCodePro.ttf'
   await basegl.fontManager.load 'SourceCodePro'
 
-  eventReactor = new KeyboardMouseReactor scene
+  new KeyboardMouseReactor scene
 
-  for _, pos of graph.nodes
-    pos[1] += 50
-    pos[0] += 60
-  for _, [s, t, offset] of graph.edges
-    addLine graph.nodes[s], graph.nodes[t]
-  for n, pos of graph.nodes
-    addNode n, pos
+  nodes = {}
+  origin = {x: graph.nodes[0].x, y: graph.nodes[0].y}
+  for _, node of graph.nodes
+    nodes[n] = [0,0] for n, _ of graph.nodes
+    node.x += 30 - origin.x
+    node.y  = 20 - origin.y - node.y
+  for _, {s, t} of graph.edges
+    if nodes[t][0] == 0
+      offset = graph.nodes[t].x - graph.nodes[s].x
+    else if nodes[s][1] == 0
+      offset = 0
+    else
+      offset = 0
+    addEdge graph.nodes[s], graph.nodes[t], offset
+    nodes[s][1] += 1
+    nodes[t][0] += 1
+  for n, node of graph.nodes
+    addNode n, node, graph.styles[node.label].hsl
 
 
 scene = basegl.scene
@@ -61,4 +73,6 @@ scene = basegl.scene
   width: 2048
   height: 2048
 
+new KeyboardMouseReactor scene
+console.log Color.hsl([1,1,.5]).toRGB()
 main()
