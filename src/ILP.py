@@ -22,7 +22,7 @@ class GraphLayout:
             if 'edges:' in line: break
             line = line.split(':')
             [y,x,r,l] = [l.split(',')[0].split('}')[0] for l in line[2:]]
-            grph.node[int(line[0])] = int(y), int(x), int(r), l
+            grph.node[int(line[0])] = int(r), int(x), int(r), l
         for line in data:
             line = line.split(':')
             [s,t] = [l.split(',')[0].split('}')[0] for l in line[2:]]
@@ -35,7 +35,7 @@ class GraphLayout:
         print('  styles:', file=f)
         for s in self.styl: print(s, file=f, end='')
         print('  nodes:', file=f)
-        for k, (y,x,r,l) in self.node.items(): print(f'    {k}: {{y:{y}, x:{x}, rank:{r}, label:{l}}}', file=f)
+        for k, (y,x,r,l) in self.node.items(): print(f'    {k}: {{y:{-r}, x:{x}, rank:{r}, label:{l}}}', file=f)
         print('  edges:', file=f)
         for k, (s,t,o)   in self.edge.items(): print(f'    {k}: {{s:{s}, t:{t}}}', file=f)
 

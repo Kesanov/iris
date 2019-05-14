@@ -196,7 +196,7 @@ class GraphLayout
     fs.writeSync file, "  styles:\n"
     labels = uniq (l for _, l of @label).sort()
     for label, i in labels
-      fs.writeSync file, "    #{label}: {hsl: [#{i/(labels.length-1)},1,.5]}\n"
+      fs.writeSync file, "    #{label}: {hsl: [#{(1+i)/labels.length},1,.5]}\n"
     fs.writeSync file, "  nodes:\n"
     for n, [y, x] of @nodes
       fs.writeSync file, "    #{n} : {y: #{y}, x: #{x}, rank: #{@ranks[n]}, label: '#{@label[n]}'}\n"
@@ -251,7 +251,7 @@ readCSV = (file) ->
       e++
     yield t
 
-state = new State readCSV '../data/q'
+state = new State readCSV '../data/ImgZen'
 
 i=0
 for graph from state.iter()

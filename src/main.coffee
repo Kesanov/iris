@@ -49,21 +49,22 @@ main = () ->
   new KeyboardMouseReactor scene
 
   nodes = {}
+  nodes[n]=[0,0] for n, _ of graph.nodes
+  for _, {s, t} of graph.edges
+    nodes[s][1] += 1
+    nodes[t][0] += 1
   origin = {x: graph.nodes[0].x, y: graph.nodes[0].y}
   for _, node of graph.nodes
-    nodes[n] = [0,0] for n, _ of graph.nodes
     node.x += 30 - origin.x
     node.y  = 20 - origin.y - node.y
   for _, {s, t} of graph.edges
     if nodes[t][0] == 0
       offset = graph.nodes[t].x - graph.nodes[s].x
-    else if nodes[s][1] == 0
+    else if nodes[s][1] == 1
       offset = 0
     else
       offset = 0
     addEdge graph.nodes[s], graph.nodes[t], offset
-    nodes[s][1] += 1
-    nodes[t][0] += 1
   for n, node of graph.nodes
     addNode n, node, graph.styles[node.label].hsl
 
