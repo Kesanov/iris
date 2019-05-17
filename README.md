@@ -28,12 +28,12 @@ python ILP.py
  npm start
 ```
 
-Examples of generated images:
+## Examples of generated images:
 
-[Dominance Layout Nat/27f](data/Nat/27f/DOM.JPG)
+![Dominance Layout Nat/27f](data/Nat/27f/DOM.JPG)
 
-[ILP Nat/27f](data/Nat/27f/ILP.JPG)
+![ILP Nat/27f](data/Nat/27f/ILP.JPG)
 
-[Dominance Layout AST](data/AST/dom.JPG)
+![Dominance Layout AST](data/AST/dom.JPG)
 
-[ILP AST](data/AST/ILP.JPG)
+![ILP AST](data/AST/ILP.JPG)
