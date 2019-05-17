@@ -10,6 +10,11 @@ chain = (args) ->
     for a from arg
       yield a
 
+reverse = (arr) ->
+  if arr.length > 0
+    for i in [arr.length-1..0]
+      yield arr[i]
+
 class Stack
 
   stack: []
@@ -152,14 +157,14 @@ class GraphLayout
 
   dominanceLayout: () =>
     # PRELIMINARY
-    [remains, xs, ys, x, y] = [[], [], [], 0, 0]
+    [remains, nByX, nByY, x, y] = [[], [], [], 0, 0]
     queue = new UniqueQueue Stack, {}, ([n, 2, 2] for n in @sourc)
 #    console.log @ranks, @sourc, queue.queue.stack
     for n, _ of @nodes
       remains[n] = @graph.rdges[n].length
     for [n, _, _] from queue.iter()
       @nodes[n][1] = x++
-      xs.push n
+      nByX.push n
       for t from @graph.edges[n]
         queue.insert t, 1 if --remains[t] == 0
     queue = new UniqueQueue Stack, {}, ([n, 2, 2] for n in @sourc.reverse())
@@ -167,24 +172,31 @@ class GraphLayout
       remains[n] = @graph.rdges[n].length
     for [n, _, _] from queue.iter()
       @nodes[n][0] = y++
-#      @nodes[n][0] = y++ if @trans[n]
-      ys.push n
+      nByY.push n
       for t from @graph.edges[n].reverse()
         queue.insert t, 1 if --remains[t] == 0
 
     # COMPACTION
-    [x, ns] = [0, sort (n for n, _ of @nodes), (n) => @nodes[n][1]]
-    for i in [0..ns.length-2]
-      @nodes[ns[i+1]][1] = if int(ns[i+1]) == @graph.edges[ns[i]][0] then x else ++x
+    x = 0
+    for i in [0..nByX.length-2]
+      @nodes[nByX[i+1]][1] = if int(nByX[i+1]) == @graph.edges[nByX[i]][0] then x else ++x
 
-    for n, _ of @nodes when @graph.edges[n].length == 0
-      @nodes[n][0] = 1 + Math.max.apply null, (@nodes[s][0] for s in @graph.rdges[n])
+    ys = (0 for n, _  of @nodes)
+    for n in nByY
+      [firstChildX, lastChildX] = [NaN, NaN]
 
-    ns = sort (n for n, _ of @nodes), (n) => @nodes[n][0]
-    ys = (-1 for n, _  of @nodes)
-    for n in sort (n for n, _ of @nodes), (n) => @nodes[n][0]
-      parentY = Math.max.apply null, (@nodes[s][0] for s in @graph.rdges[n])
-      ys[@nodes[n][1]] = @nodes[n][0] = 1 + Math.max parentY, ys[@nodes[n][1]]
+      for c from         @graph.edges[n]  when @graph.rdges[c].length == 1
+        firstChildX = @nodes[c][1]; break
+      for c from reverse(@graph.edges[n]) when @graph.rdges[c].length == 1
+        lastChildX = @nodes[c][1]; break
+      childY = Math.max.apply null, (ys[x] for x in [firstChildX..lastChildX])
+
+      if @graph.rdges[n].length == 0
+        parentY = 0
+      else
+        [firstParentX, lastParentX] = [@nodes[@graph.rdges[n][0]][1], @nodes[@graph.rdges[n][@graph.rdges[n].length-1]][1]]
+        parentY = Math.max.apply null, (ys[x] for x in [firstParentX..lastParentX])
+      ys[@nodes[n][1]] = @nodes[n][0] = 1 + Math.max (childY-2), parentY
 #
 #    for n, pos of @nodes
 #      pos[1] = pos[1] - pos[0]

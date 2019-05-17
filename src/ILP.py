@@ -44,7 +44,7 @@ def main(graph):
     M = 1000
     m = g.Model()
 
-    def abs(val):  # |val|
+    def abs_(val):  # |val|
         x = m.addVar(vtype=g.GRB.CONTINUOUS)
         m.addConstr(x >=  val)
         m.addConstr(x >= -val)
@@ -94,7 +94,7 @@ def main(graph):
     # - set objective : change in node position + total edge length
     m.setObjective(
         # sum(abs(node[n] - x)       for n, (_, x, _, _) in graph.node.items() if x is not None)+
-        sum(abs(node[s] - node[t]) for s, t, _   in graph.edge.values()),
+        sum(abs_(node[s] - node[t]) for s, t, _   in graph.edge.values()),
         g.GRB.MINIMIZE,
     )
 
@@ -102,9 +102,9 @@ def main(graph):
     m.write('debug.lp')
 
     m.optimize()
-
-    for n in graph.node: graph.node[n] = graph.node[n][y], int(round(node[n].X)), graph.node[n][2], graph.node[n][3]
+    for n in graph.node: graph.node[n] = -graph.node[n][2], int(round(node[n].X)), graph.node[n][2], graph.node[n][3]
     for e in graph.edge: graph.edge[e] = graph.edge[e][0], graph.edge[e][1], int(round(edge[e].X))
+    print(sum(graph.node[t][0] - graph.node[s][0] + abs(graph.node[s][1] - graph.node[t][1]) for (s,t,o) in graph.edge.values()))
     print(graph.node)
     print({e: edge[e].X for e in graph.edge})
     print({var.VarName: int(round(var.X)) for var in m.getVars()})

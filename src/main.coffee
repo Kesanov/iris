@@ -11,19 +11,19 @@ addNode = (n, {y, x, rank, label}, hsl) ->
   r = G/6
 #  name = basegl.tet.x {str: "HELLO", scene: scene, fontFamily: 'SourceCodePro', size: 16}
   src = addLine {y: y, x: x}, {y: y+.3, x: x}
-  trg = addLine {y: y, x: x}, {y: y-.3, x: x}
   node = scene.add basegl.symbol basegl.expr -> circle(r).move(r, r).fill(Color.hsl hsl)
   node.bbox.xy = [2*r, 2*r]
   node.position.xy = [G*x, G*y]
   node.addEventListener "mouseover", (e) => alert "Node: id:#{n}, label: #{label}"
 
-  group [node, src, trg]
+  group [node, src]
 
 addEdge = (s, t, offset) ->
+  line0 = addLine {y: s.y   , x: s.x}       , {y: s.y-.3, x: s.x}
   line1 = addLine {y: s.y-.3, x: s.x}       , {y: s.y-.3, x: s.x+offset}
   line2 = addLine {y: s.y-.3, x: s.x+offset}, {y: t.y+.3, x: s.x+offset}
   line3 = addLine {y: t.y+.3, x: s.x+offset}, {y: t.y+.3, x: t.x}
-  group [line1, line2, line3]
+  group [line0, line1, line2, line3]
 
 addLine = (s, t) ->
   pi = if s.x > t.x then Math.PI else 0
@@ -58,9 +58,9 @@ main = () ->
     node.x += 30 - origin.x
     node.y  = 20 - origin.y - node.y
   for _, {s, t} of graph.edges
-    if nodes[t][0] == 0
+    if nodes[t][0] == 1
       offset = graph.nodes[t].x - graph.nodes[s].x
-    else if nodes[s][1] == 1
+    else if nodes[s][1] == 2
       offset = 0
     else
       offset = 0
@@ -75,5 +75,5 @@ scene = basegl.scene
   height: 2048
 
 new KeyboardMouseReactor scene
-console.log Color.hsl([1,1,.5]).toRGB()
+
 main()
