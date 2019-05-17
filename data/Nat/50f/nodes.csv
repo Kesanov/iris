@@ -1,0 +1,643 @@
+action, id, label
+NEW ITERATION, 0,
+insert, 0, 1
+insert, 1, 1
+insert, 3, 1
+insert, 5, 1
+insert, 6, 1
+insert, 7, 1
+insert, 8, 1
+insert, 9, 1
+insert, 10, 1
+insert, 11, 1
+insert, 12, 1
+insert, 13, 1
+insert, 14, 1
+insert, 15, 1
+insert, 16, 4
+insert, 17, 1
+insert, 18, 1
+insert, 19, 1
+insert, 20, 1
+insert, 21, 1
+insert, 22, 1
+insert, 23, 1
+insert, 24, 1
+insert, 25, 1
+insert, 26, 8
+insert, 27, 1
+insert, 28, 1
+insert, 29, 1
+insert, 30, 1
+insert, 31, 1
+insert, 32, 10
+insert, 33, 1
+insert, 34, 1
+insert, 35, 1
+insert, 36, 1
+insert, 37, 1
+insert, 38, 12
+insert, 39, 1
+insert, 40, 1
+insert, 41, 1
+insert, 42, 1
+insert, 43, 1
+insert, 44, 14
+insert, 45, 1
+insert, 46, 1
+insert, 47, 1
+insert, 49, 1
+insert, 50, 1
+insert, 51, 1
+insert, 52, 1
+insert, 53, 1
+insert, 54, 18
+insert, 55, 1
+insert, 56, 1
+insert, 57, 1
+insert, 58, 1
+insert, 59, 1
+insert, 60, 20
+insert, 61, 1
+insert, 62, 1
+insert, 63, 1
+insert, 64, 1
+insert, 65, 1
+insert, 66, 22
+insert, 67, 1
+insert, 68, 1
+insert, 69, 1
+insert, 71, 1
+insert, 72, 24
+insert, 73, 1
+NEW ITERATION, 1,
+NEW ITERATION, 2,
+NEW ITERATION, 3,
+remove, 1,
+remove, 54,
+remove, 10,
+remove, 47,
+remove, 20,
+remove, 42,
+insert, 74, 1
+insert, 75, 18
+insert, 76, 1
+insert, 77, 1
+NEW ITERATION, 4,
+NEW ITERATION, 5,
+NEW ITERATION, 6,
+remove, 75,
+remove, 60,
+remove, 46,
+remove, 53,
+remove, 50,
+remove, 51,
+insert, 78, 18
+insert, 79, 20
+insert, 80, 1
+insert, 81, 1
+NEW ITERATION, 7,
+NEW ITERATION, 8,
+NEW ITERATION, 9,
+remove, 79,
+remove, 66,
+remove, 52,
+remove, 59,
+remove, 56,
+remove, 57,
+insert, 82, 20
+insert, 83, 22
+insert, 84, 1
+insert, 85, 1
+NEW ITERATION, 10,
+NEW ITERATION, 11,
+NEW ITERATION, 12,
+remove, 83,
+remove, 72,
+remove, 58,
+remove, 65,
+remove, 62,
+remove, 63,
+insert, 86, 22
+insert, 87, 24
+insert, 88, 1
+insert, 89, 1
+NEW ITERATION, 13,
+NEW ITERATION, 14,
+NEW ITERATION, 15,
+remove, 87,
+remove, 73,
+remove, 64,
+remove, 71,
+remove, 68,
+remove, 69,
+insert, 90, 24
+insert, 91, 1
+insert, 92, 1
+insert, 93, 1
+NEW ITERATION, 16,
+NEW ITERATION, 17,
+NEW ITERATION, 18,
+remove, 91,
+remove, 89,
+remove, 67,
+remove, 93,
+remove, 92,
+insert, 94, 1
+insert, 95, 1
+insert, 96, 1
+NEW ITERATION, 19,
+NEW ITERATION, 20,
+remove, 94,
+remove, 85,
+remove, 96,
+remove, 61,
+remove, 95,
+remove, 88,
+insert, 97, 1
+insert, 98, 1
+insert, 99, 1
+insert, 100, 1
+NEW ITERATION, 21,
+NEW ITERATION, 22,
+remove, 97,
+remove, 81,
+remove, 100,
+remove, 55,
+remove, 98,
+remove, 84,
+insert, 101, 1
+insert, 102, 1
+insert, 103, 1
+insert, 104, 1
+NEW ITERATION, 23,
+NEW ITERATION, 24,
+remove, 101,
+remove, 77,
+remove, 104,
+remove, 49,
+remove, 102,
+remove, 80,
+insert, 105, 1
+insert, 106, 1
+insert, 107, 1
+insert, 108, 1
+NEW ITERATION, 25,
+NEW ITERATION, 26,
+NEW ITERATION, 27,
+remove, 106,
+remove, 26,
+remove, 6,
+remove, 19,
+remove, 76,
+remove, 14,
+insert, 109, 1
+insert, 110, 8
+insert, 111, 1
+insert, 112, 1
+NEW ITERATION, 28,
+remove, 105,
+remove, 110,
+remove, 108,
+remove, 22,
+remove, 109,
+remove, 21,
+insert, 113, 1
+insert, 114, 8
+insert, 115, 1
+insert, 116, 8
+insert, 117, 1
+insert, 118, 1
+insert, 119, 1
+insert, 120, 1
+NEW ITERATION, 29,
+NEW ITERATION, 30,
+NEW ITERATION, 31,
+NEW ITERATION, 32,
+remove, 113,
+remove, 32,
+remove, 18,
+remove, 25,
+remove, 118,
+remove, 23,
+insert, 121, 1
+insert, 122, 10
+insert, 123, 1
+insert, 124, 1
+NEW ITERATION, 33,
+remove, 114,
+remove, 122,
+remove, 116,
+remove, 28,
+remove, 121,
+remove, 27,
+insert, 125, 1
+insert, 126, 10
+insert, 127, 8
+insert, 128, 10
+insert, 129, 8
+insert, 130, 1
+insert, 131, 1
+insert, 132, 1
+NEW ITERATION, 34,
+NEW ITERATION, 35,
+NEW ITERATION, 36,
+NEW ITERATION, 37,
+remove, 125,
+remove, 38,
+remove, 24,
+remove, 31,
+remove, 130,
+remove, 29,
+insert, 133, 1
+insert, 134, 12
+insert, 135, 1
+insert, 136, 1
+NEW ITERATION, 38,
+remove, 126,
+remove, 134,
+remove, 128,
+remove, 34,
+remove, 133,
+remove, 33,
+insert, 137, 1
+insert, 138, 12
+insert, 139, 10
+insert, 140, 12
+insert, 141, 10
+insert, 142, 1
+insert, 143, 1
+insert, 144, 1
+NEW ITERATION, 39,
+NEW ITERATION, 40,
+NEW ITERATION, 41,
+NEW ITERATION, 42,
+remove, 137,
+remove, 44,
+remove, 30,
+remove, 37,
+remove, 142,
+remove, 35,
+insert, 145, 1
+insert, 146, 14
+insert, 147, 1
+insert, 148, 1
+NEW ITERATION, 43,
+remove, 138,
+remove, 146,
+remove, 140,
+remove, 40,
+remove, 145,
+remove, 39,
+insert, 149, 1
+insert, 150, 14
+insert, 151, 12
+insert, 152, 14
+insert, 153, 12
+insert, 154, 1
+insert, 155, 1
+insert, 156, 1
+NEW ITERATION, 44,
+NEW ITERATION, 45,
+NEW ITERATION, 46,
+NEW ITERATION, 47,
+remove, 149,
+remove, 45,
+remove, 36,
+remove, 43,
+remove, 154,
+remove, 41,
+insert, 157, 1
+insert, 158, 1
+insert, 159, 1
+insert, 160, 1
+NEW ITERATION, 48,
+remove, 150,
+remove, 160,
+remove, 152,
+remove, 157,
+remove, 158,
+insert, 161, 14
+insert, 162, 1
+insert, 163, 14
+NEW ITERATION, 49,
+NEW ITERATION, 50,
+remove, 161,
+remove, 148,
+remove, 163,
+remove, 156,
+remove, 162,
+remove, 159,
+insert, 164, 14
+insert, 165, 1
+insert, 166, 14
+insert, 167, 1
+NEW ITERATION, 51,
+NEW ITERATION, 52,
+remove, 164,
+remove, 136,
+remove, 167,
+remove, 144,
+remove, 165,
+remove, 147,
+insert, 168, 14
+insert, 169, 1
+insert, 170, 1
+insert, 171, 1
+NEW ITERATION, 53,
+NEW ITERATION, 54,
+remove, 168,
+remove, 124,
+remove, 171,
+remove, 132,
+remove, 169,
+remove, 135,
+insert, 172, 14
+insert, 173, 1
+insert, 174, 1
+insert, 175, 1
+NEW ITERATION, 55,
+NEW ITERATION, 56,
+remove, 172,
+remove, 112,
+remove, 175,
+remove, 120,
+remove, 173,
+remove, 123,
+insert, 176, 14
+insert, 177, 1
+insert, 178, 1
+insert, 179, 1
+NEW ITERATION, 57,
+NEW ITERATION, 58,
+NEW ITERATION, 59,
+remove, 177,
+remove, 16,
+remove, 5,
+remove, 9,
+remove, 111,
+remove, 7,
+insert, 180, 1
+insert, 181, 4
+insert, 182, 1
+insert, 183, 1
+NEW ITERATION, 60,
+remove, 176,
+remove, 181,
+remove, 179,
+remove, 12,
+remove, 180,
+remove, 11,
+insert, 184, 1
+insert, 185, 4
+insert, 186, 14
+insert, 187, 4
+insert, 188, 1
+insert, 189, 1
+insert, 190, 1
+insert, 191, 1
+NEW ITERATION, 61,
+NEW ITERATION, 62,
+NEW ITERATION, 63,
+NEW ITERATION, 64,
+remove, 184,
+remove, 17,
+remove, 8,
+remove, 15,
+remove, 189,
+remove, 13,
+insert, 192, 1
+insert, 193, 1
+insert, 194, 1
+insert, 195, 1
+NEW ITERATION, 65,
+remove, 185,
+remove, 195,
+remove, 187,
+remove, 192,
+remove, 193,
+insert, 196, 4
+insert, 197, 1
+insert, 198, 4
+NEW ITERATION, 66,
+NEW ITERATION, 67,
+remove, 196,
+remove, 183,
+remove, 198,
+remove, 191,
+remove, 197,
+remove, 194,
+insert, 199, 4
+insert, 200, 1
+insert, 201, 4
+insert, 202, 1
+NEW ITERATION, 68,
+NEW ITERATION, 69,
+remove, 199,
+remove, 3,
+remove, 202,
+remove, 200,
+remove, 182,
+insert, 203, 4
+insert, 204, 1
+insert, 205, 1
+NEW ITERATION, 70,
+NEW ITERATION, 71,
+NEW ITERATION, 72,
+NEW ITERATION, 73,
+remove, 203,
+remove, 201,
+remove, 204,
+remove, 190,
+remove, 205,
+insert, 206, 4
+insert, 207, 4
+insert, 208, 1
+NEW ITERATION, 74,
+NEW ITERATION, 75,
+NEW ITERATION, 76,
+remove, 178,
+remove, 127,
+remove, 207,
+remove, 129,
+remove, 188,
+remove, 119,
+insert, 209, 1
+insert, 210, 8
+insert, 211, 4
+insert, 212, 8
+NEW ITERATION, 77,
+NEW ITERATION, 78,
+NEW ITERATION, 79,
+NEW ITERATION, 80,
+NEW ITERATION, 81,
+NEW ITERATION, 82,
+remove, 186,
+remove, 166,
+remove, 174,
+remove, 155,
+remove, 170,
+insert, 213, 14
+insert, 214, 14
+insert, 215, 1
+NEW ITERATION, 83,
+NEW ITERATION, 84,
+NEW ITERATION, 85,
+NEW ITERATION, 86,
+NEW ITERATION, 87,
+NEW ITERATION, 88,
+NEW ITERATION, 89,
+NEW ITERATION, 90,
+NEW ITERATION, 91,
+remove, 151,
+remove, 214,
+remove, 153,
+remove, 209,
+remove, 143,
+remove, 215,
+insert, 216, 12
+insert, 217, 14
+insert, 218, 12
+insert, 219, 1
+NEW ITERATION, 92,
+NEW ITERATION, 93,
+NEW ITERATION, 94,
+NEW ITERATION, 95,
+NEW ITERATION, 96,
+NEW ITERATION, 97,
+NEW ITERATION, 98,
+NEW ITERATION, 99,
+NEW ITERATION, 100,
+remove, 139,
+remove, 218,
+remove, 141,
+remove, 210,
+remove, 131,
+remove, 219,
+insert, 220, 10
+insert, 221, 12
+insert, 222, 10
+insert, 223, 8
+NEW ITERATION, 101,
+NEW ITERATION, 102,
+NEW ITERATION, 103,
+NEW ITERATION, 104,
+NEW ITERATION, 105,
+NEW ITERATION, 106,
+NEW ITERATION, 107,
+NEW ITERATION, 108,
+NEW ITERATION, 109,
+NEW ITERATION, 110,
+NEW ITERATION, 111,
+NEW ITERATION, 112,
+NEW ITERATION, 113,
+NEW ITERATION, 114,
+NEW ITERATION, 115,
+NEW ITERATION, 116,
+NEW ITERATION, 117,
+NEW ITERATION, 118,
+NEW ITERATION, 119,
+NEW ITERATION, 120,
+NEW ITERATION, 121,
+NEW ITERATION, 122,
+NEW ITERATION, 123,
+NEW ITERATION, 124,
+NEW ITERATION, 125,
+NEW ITERATION, 126,
+NEW ITERATION, 127,
+NEW ITERATION, 128,
+NEW ITERATION, 129,
+NEW ITERATION, 130,
+NEW ITERATION, 131,
+NEW ITERATION, 132,
+NEW ITERATION, 133,
+NEW ITERATION, 134,
+NEW ITERATION, 135,
+NEW ITERATION, 136,
+NEW ITERATION, 137,
+NEW ITERATION, 138,
+NEW ITERATION, 139,
+NEW ITERATION, 140,
+NEW ITERATION, 141,
+NEW ITERATION, 142,
+NEW ITERATION, 143,
+NEW ITERATION, 144,
+NEW ITERATION, 145,
+NEW ITERATION, 146,
+NEW ITERATION, 147,
+NEW ITERATION, 148,
+NEW ITERATION, 149,
+NEW ITERATION, 150,
+NEW ITERATION, 151,
+NEW ITERATION, 152,
+NEW ITERATION, 153,
+NEW ITERATION, 154,
+NEW ITERATION, 155,
+NEW ITERATION, 156,
+NEW ITERATION, 157,
+NEW ITERATION, 158,
+NEW ITERATION, 159,
+NEW ITERATION, 160,
+NEW ITERATION, 161,
+NEW ITERATION, 162,
+NEW ITERATION, 163,
+NEW ITERATION, 164,
+NEW ITERATION, 165,
+NEW ITERATION, 166,
+NEW ITERATION, 167,
+NEW ITERATION, 168,
+NEW ITERATION, 169,
+NEW ITERATION, 170,
+NEW ITERATION, 171,
+NEW ITERATION, 172,
+NEW ITERATION, 173,
+NEW ITERATION, 174,
+NEW ITERATION, 175,
+NEW ITERATION, 176,
+NEW ITERATION, 177,
+NEW ITERATION, 178,
+NEW ITERATION, 179,
+NEW ITERATION, 180,
+NEW ITERATION, 181,
+NEW ITERATION, 182,
+NEW ITERATION, 183,
+NEW ITERATION, 184,
+NEW ITERATION, 185,
+NEW ITERATION, 186,
+NEW ITERATION, 187,
+NEW ITERATION, 188,
+NEW ITERATION, 189,
+NEW ITERATION, 190,
+NEW ITERATION, 191,
+NEW ITERATION, 192,
+NEW ITERATION, 193,
+NEW ITERATION, 194,
+NEW ITERATION, 195,
+NEW ITERATION, 196,
+NEW ITERATION, 197,
+NEW ITERATION, 198,
+NEW ITERATION, 199,
+NEW ITERATION, 200,
+NEW ITERATION, 201,
+NEW ITERATION, 202,
+NEW ITERATION, 203,
+NEW ITERATION, 204,
+NEW ITERATION, 205,
+NEW ITERATION, 206,
+NEW ITERATION, 207,
+NEW ITERATION, 208,
+NEW ITERATION, 209,
+NEW ITERATION, 210,
+NEW ITERATION, 211,
+NEW ITERATION, 212,
+NEW ITERATION, 213,
+NEW ITERATION, 214,
+NEW ITERATION, 215,
+NEW ITERATION, 216,
+NEW ITERATION, 217,
+NEW ITERATION, 218,
+NEW ITERATION, 219,
+NEW ITERATION, 220,
+NEW ITERATION, 221,
+NEW ITERATION, 222,
+NEW ITERATION, 223,

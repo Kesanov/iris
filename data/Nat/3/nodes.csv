@@ -1,0 +1,97 @@
+action, id, label
+NEW ITERATION, 0,
+insert, 0, 1
+insert, 1, 1
+insert, 2, 1
+insert, 3, 1
+insert, 5, 1
+insert, 6, 1
+insert, 7, 1
+insert, 8, 1
+insert, 9, 1
+insert, 10, 2
+insert, 11, 1
+insert, 12, 1
+insert, 13, 1
+insert, 15, 1
+insert, 16, 4
+insert, 17, 1
+NEW ITERATION, 1,
+NEW ITERATION, 2,
+NEW ITERATION, 3,
+NEW ITERATION, 4,
+remove, 10,
+remove, 16,
+remove, 2,
+remove, 9,
+remove, 6,
+remove, 7,
+insert, 18, 2
+insert, 19, 4
+insert, 20, 1
+insert, 21, 1
+NEW ITERATION, 5,
+NEW ITERATION, 6,
+NEW ITERATION, 7,
+remove, 19,
+remove, 17,
+remove, 8,
+remove, 15,
+remove, 12,
+remove, 13,
+insert, 22, 4
+insert, 23, 1
+insert, 24, 1
+insert, 25, 1
+NEW ITERATION, 8,
+NEW ITERATION, 9,
+NEW ITERATION, 10,
+remove, 23,
+remove, 21,
+remove, 11,
+remove, 25,
+remove, 24,
+insert, 26, 1
+insert, 27, 1
+insert, 28, 1
+NEW ITERATION, 11,
+NEW ITERATION, 12,
+remove, 26,
+remove, 3,
+remove, 28,
+remove, 5,
+remove, 27,
+remove, 20,
+insert, 29, 1
+insert, 30, 1
+insert, 31, 1
+insert, 32, 1
+NEW ITERATION, 13,
+NEW ITERATION, 14,
+NEW ITERATION, 15,
+NEW ITERATION, 16,
+NEW ITERATION, 17,
+NEW ITERATION, 18,
+NEW ITERATION, 19,
+NEW ITERATION, 20,
+NEW ITERATION, 21,
+NEW ITERATION, 22,
+NEW ITERATION, 23,
+NEW ITERATION, 24,
+NEW ITERATION, 25,
+NEW ITERATION, 26,
+NEW ITERATION, 27,
+NEW ITERATION, 28,
+NEW ITERATION, 29,
+NEW ITERATION, 30,
+NEW ITERATION, 31,
+NEW ITERATION, 32,
+NEW ITERATION, 33,
+NEW ITERATION, 34,
+NEW ITERATION, 35,
+NEW ITERATION, 36,
+NEW ITERATION, 37,
+NEW ITERATION, 38,
+NEW ITERATION, 39,
+NEW ITERATION, 40,
+NEW ITERATION, 41,

@@ -1,0 +1,138 @@
+action, id, source, target, label
+NEW ITERATION, 0, , ,
+insert, 0, 0, 1, 0
+insert, 4, 1, 10, 1
+insert, 5, 1, 3, 2
+insert, 6, 2, 6, 0
+insert, 7, 2, 3, 1
+insert, 8, 2, 5, 2
+insert, 11, 3, 5, 2
+insert, 15, 5, 10, 0
+insert, 18, 6, 7, 0
+insert, 19, 6, 10, 1
+insert, 22, 7, 16, 1
+insert, 23, 7, 9, 2
+insert, 24, 8, 12, 0
+insert, 25, 8, 9, 1
+insert, 26, 8, 11, 2
+insert, 29, 9, 11, 2
+insert, 33, 11, 16, 0
+insert, 36, 12, 13, 0
+insert, 37, 12, 16, 1
+insert, 40, 13, 17, 1
+insert, 41, 13, 15, 2
+insert, 46, 15, 17, 1
+insert, 47, 15, 17, 2
+NEW ITERATION, 1, , ,
+NEW ITERATION, 2, , ,
+NEW ITERATION, 3, , ,
+NEW ITERATION, 4, , ,
+remove, 4, , ,
+remove, 15, , ,
+remove, 37, , ,
+remove, 33, , ,
+remove, 6, , ,
+remove, 7, , ,
+remove, 8, , ,
+remove, 25, , ,
+remove, 29, , ,
+remove, 18, , ,
+remove, 19, , ,
+remove, 22, , ,
+remove, 23, , ,
+insert, 54, 1, 18, 0
+insert, 55, 18, 19, 1
+insert, 56, 5, 18, 2
+insert, 58, 12, 19, 1
+insert, 59, 11, 19, 2
+insert, 60, 20, 21, 0
+insert, 61, 3, 20, 1
+insert, 62, 5, 20, 2
+insert, 64, 8, 21, 1
+insert, 65, 11, 21, 2
+NEW ITERATION, 5, , ,
+NEW ITERATION, 6, , ,
+NEW ITERATION, 7, , ,
+remove, 55, , ,
+remove, 24, , ,
+remove, 25, , ,
+remove, 26, , ,
+remove, 46, , ,
+remove, 47, , ,
+remove, 36, , ,
+remove, 37, , ,
+remove, 40, , ,
+remove, 41, , ,
+insert, 66, 18, 22, 0
+insert, 67, 22, 23, 1
+insert, 68, 11, 22, 2
+insert, 70, 23, 25, 1
+insert, 71, 23, 25, 2
+insert, 72, 24, 25, 0
+insert, 73, 21, 24, 1
+insert, 74, 11, 24, 2
+NEW ITERATION, 8, , ,
+NEW ITERATION, 9, , ,
+NEW ITERATION, 10, , ,
+remove, 67, , ,
+remove, 70, , ,
+remove, 71, , ,
+remove, 60, , ,
+remove, 33, , ,
+remove, 26, , ,
+remove, 29, , ,
+remove, 72, , ,
+insert, 78, 22, 26, 0
+insert, 79, 26, 27, 1
+insert, 80, 26, 28, 2
+insert, 81, 20, 27, 0
+insert, 83, 27, 28, 2
+insert, 84, 22, 28, 0
+NEW ITERATION, 11, , ,
+NEW ITERATION, 12, , ,
+remove, 79, , ,
+remove, 80, , ,
+remove, 5, , ,
+remove, 7, , ,
+remove, 11, , ,
+remove, 15, , ,
+remove, 8, , ,
+remove, 83, , ,
+remove, 60, , ,
+insert, 87, 22, 29, 0
+insert, 88, 29, 30, 1
+insert, 89, 29, 31, 2
+insert, 90, 1, 30, 0
+insert, 92, 30, 32, 2
+insert, 93, 22, 31, 0
+insert, 95, 31, 32, 2
+insert, 96, 18, 32, 0
+NEW ITERATION, 13, , ,
+NEW ITERATION, 14, , ,
+NEW ITERATION, 15, , ,
+NEW ITERATION, 16, , ,
+NEW ITERATION, 17, , ,
+NEW ITERATION, 18, , ,
+NEW ITERATION, 19, , ,
+NEW ITERATION, 20, , ,
+NEW ITERATION, 21, , ,
+NEW ITERATION, 22, , ,
+NEW ITERATION, 23, , ,
+NEW ITERATION, 24, , ,
+NEW ITERATION, 25, , ,
+NEW ITERATION, 26, , ,
+NEW ITERATION, 27, , ,
+NEW ITERATION, 28, , ,
+NEW ITERATION, 29, , ,
+NEW ITERATION, 30, , ,
+NEW ITERATION, 31, , ,
+NEW ITERATION, 32, , ,
+NEW ITERATION, 33, , ,
+NEW ITERATION, 34, , ,
+NEW ITERATION, 35, , ,
+NEW ITERATION, 36, , ,
+NEW ITERATION, 37, , ,
+NEW ITERATION, 38, , ,
+NEW ITERATION, 39, , ,
+NEW ITERATION, 40, , ,
+NEW ITERATION, 41, , ,

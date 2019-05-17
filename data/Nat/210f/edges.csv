@@ -1,0 +1,1807 @@
+action, id, source, target, label
+NEW ITERATION, 0, , ,
+insert, 0, 0, 1, 0
+insert, 4, 1, 36, 1
+insert, 5, 1, 3, 2
+insert, 10, 3, 5, 1
+insert, 11, 3, 5, 2
+insert, 15, 5, 6, 0
+insert, 18, 6, 7, 0
+insert, 19, 6, 10, 1
+insert, 22, 7, 16, 1
+insert, 23, 7, 9, 2
+insert, 24, 8, 12, 0
+insert, 25, 8, 9, 1
+insert, 26, 8, 11, 2
+insert, 29, 9, 11, 2
+insert, 30, 10, 14, 0
+insert, 31, 10, 20, 1
+insert, 33, 11, 16, 0
+insert, 36, 12, 13, 0
+insert, 37, 12, 16, 1
+insert, 40, 13, 17, 1
+insert, 41, 13, 15, 2
+insert, 43, 14, 26, 1
+insert, 44, 14, 19, 2
+insert, 46, 15, 17, 1
+insert, 47, 15, 17, 2
+insert, 54, 18, 22, 0
+insert, 55, 18, 19, 1
+insert, 56, 18, 21, 2
+insert, 59, 19, 21, 2
+insert, 60, 20, 30, 0
+insert, 61, 20, 36, 1
+insert, 63, 21, 26, 0
+insert, 66, 22, 23, 0
+insert, 67, 22, 26, 1
+insert, 70, 23, 32, 1
+insert, 71, 23, 25, 2
+insert, 72, 24, 28, 0
+insert, 73, 24, 25, 1
+insert, 74, 24, 27, 2
+insert, 77, 25, 27, 2
+insert, 81, 27, 32, 0
+insert, 84, 28, 29, 0
+insert, 85, 28, 32, 1
+insert, 88, 29, 33, 1
+insert, 89, 29, 31, 2
+insert, 91, 30, 42, 1
+insert, 92, 30, 35, 2
+insert, 94, 31, 33, 1
+insert, 95, 31, 33, 2
+insert, 102, 34, 38, 0
+insert, 103, 34, 35, 1
+insert, 104, 34, 37, 2
+insert, 107, 35, 37, 2
+insert, 108, 36, 58, 0
+insert, 111, 37, 42, 0
+insert, 114, 38, 39, 0
+insert, 115, 38, 42, 1
+insert, 118, 39, 48, 1
+insert, 119, 39, 41, 2
+insert, 120, 40, 44, 0
+insert, 121, 40, 41, 1
+insert, 122, 40, 43, 2
+insert, 125, 41, 43, 2
+insert, 129, 43, 48, 0
+insert, 132, 44, 45, 0
+insert, 133, 44, 48, 1
+insert, 136, 45, 54, 1
+insert, 137, 45, 47, 2
+insert, 138, 46, 50, 0
+insert, 139, 46, 47, 1
+insert, 140, 46, 49, 2
+insert, 143, 47, 49, 2
+insert, 147, 49, 54, 0
+insert, 150, 50, 51, 0
+insert, 151, 50, 54, 1
+insert, 154, 51, 60, 1
+insert, 155, 51, 53, 2
+insert, 156, 52, 56, 0
+insert, 157, 52, 53, 1
+insert, 158, 52, 55, 2
+insert, 161, 53, 55, 2
+insert, 165, 55, 60, 0
+insert, 168, 56, 57, 0
+insert, 169, 56, 60, 1
+insert, 172, 57, 61, 1
+insert, 173, 57, 59, 2
+insert, 175, 58, 70, 1
+insert, 176, 58, 63, 2
+insert, 178, 59, 61, 1
+insert, 179, 59, 61, 2
+insert, 186, 62, 66, 0
+insert, 187, 62, 63, 1
+insert, 188, 62, 65, 2
+insert, 191, 63, 65, 2
+insert, 195, 65, 70, 0
+insert, 198, 66, 67, 0
+insert, 199, 66, 70, 1
+insert, 202, 67, 76, 1
+insert, 203, 67, 69, 2
+insert, 204, 68, 72, 0
+insert, 205, 68, 69, 1
+insert, 206, 68, 71, 2
+insert, 209, 69, 71, 2
+insert, 213, 71, 76, 0
+insert, 216, 72, 73, 0
+insert, 217, 72, 76, 1
+insert, 220, 73, 82, 1
+insert, 221, 73, 75, 2
+insert, 222, 74, 78, 0
+insert, 223, 74, 75, 1
+insert, 224, 74, 77, 2
+insert, 227, 75, 77, 2
+insert, 231, 77, 82, 0
+insert, 234, 78, 79, 0
+insert, 235, 78, 82, 1
+insert, 238, 79, 88, 1
+insert, 239, 79, 81, 2
+insert, 240, 80, 84, 0
+insert, 241, 80, 81, 1
+insert, 242, 80, 83, 2
+insert, 245, 81, 83, 2
+insert, 249, 83, 88, 0
+insert, 252, 84, 85, 0
+insert, 253, 84, 88, 1
+insert, 256, 85, 94, 1
+insert, 257, 85, 87, 2
+insert, 258, 86, 90, 0
+insert, 259, 86, 87, 1
+insert, 260, 86, 89, 2
+insert, 263, 87, 89, 2
+insert, 267, 89, 94, 0
+insert, 270, 90, 91, 0
+insert, 271, 90, 94, 1
+insert, 274, 91, 100, 1
+insert, 275, 91, 93, 2
+insert, 276, 92, 96, 0
+insert, 277, 92, 93, 1
+insert, 278, 92, 95, 2
+insert, 281, 93, 95, 2
+insert, 285, 95, 100, 0
+insert, 288, 96, 97, 0
+insert, 289, 96, 100, 1
+insert, 292, 97, 101, 1
+insert, 293, 97, 99, 2
+insert, 298, 99, 101, 1
+insert, 299, 99, 101, 2
+NEW ITERATION, 1, , ,
+NEW ITERATION, 2, , ,
+NEW ITERATION, 3, , ,
+remove, 3, , ,
+remove, 4, , ,
+remove, 5, , ,
+remove, 210, , ,
+remove, 211, , ,
+remove, 212, , ,
+remove, 60, , ,
+remove, 61, , ,
+remove, 62, , ,
+remove, 189, , ,
+remove, 190, , ,
+remove, 191, , ,
+remove, 108, , ,
+remove, 109, , ,
+remove, 110, , ,
+remove, 174, , ,
+remove, 175, , ,
+remove, 176, , ,
+insert, 306, 0, 102, 0
+insert, 307, 70, 102, 1
+insert, 308, 3, 102, 2
+insert, 310, 66, 103, 1
+insert, 311, 65, 103, 2
+insert, 312, 30, 104, 0
+insert, 313, 63, 104, 1
+insert, 314, 10, 104, 2
+insert, 316, 62, 105, 1
+insert, 317, 65, 105, 2
+NEW ITERATION, 4, , ,
+NEW ITERATION, 5, , ,
+NEW ITERATION, 6, , ,
+remove, 309, , ,
+remove, 310, , ,
+remove, 311, , ,
+remove, 228, , ,
+remove, 229, , ,
+remove, 230, , ,
+remove, 186, , ,
+remove, 187, , ,
+remove, 188, , ,
+remove, 207, , ,
+remove, 208, , ,
+remove, 209, , ,
+remove, 198, , ,
+remove, 199, , ,
+remove, 200, , ,
+remove, 201, , ,
+remove, 202, , ,
+remove, 203, , ,
+insert, 318, 102, 106, 0
+insert, 319, 76, 106, 1
+insert, 320, 65, 106, 2
+insert, 322, 72, 107, 1
+insert, 323, 71, 107, 2
+insert, 324, 69, 108, 0
+insert, 325, 105, 108, 1
+insert, 326, 65, 108, 2
+insert, 328, 68, 109, 1
+insert, 329, 71, 109, 2
+NEW ITERATION, 7, , ,
+NEW ITERATION, 8, , ,
+NEW ITERATION, 9, , ,
+remove, 321, , ,
+remove, 322, , ,
+remove, 323, , ,
+remove, 246, , ,
+remove, 247, , ,
+remove, 248, , ,
+remove, 204, , ,
+remove, 205, , ,
+remove, 206, , ,
+remove, 225, , ,
+remove, 226, , ,
+remove, 227, , ,
+remove, 216, , ,
+remove, 217, , ,
+remove, 218, , ,
+remove, 219, , ,
+remove, 220, , ,
+remove, 221, , ,
+insert, 330, 106, 110, 0
+insert, 331, 82, 110, 1
+insert, 332, 71, 110, 2
+insert, 334, 78, 111, 1
+insert, 335, 77, 111, 2
+insert, 336, 75, 112, 0
+insert, 337, 109, 112, 1
+insert, 338, 71, 112, 2
+insert, 340, 74, 113, 1
+insert, 341, 77, 113, 2
+NEW ITERATION, 10, , ,
+NEW ITERATION, 11, , ,
+NEW ITERATION, 12, , ,
+remove, 333, , ,
+remove, 334, , ,
+remove, 335, , ,
+remove, 264, , ,
+remove, 265, , ,
+remove, 266, , ,
+remove, 222, , ,
+remove, 223, , ,
+remove, 224, , ,
+remove, 243, , ,
+remove, 244, , ,
+remove, 245, , ,
+remove, 234, , ,
+remove, 235, , ,
+remove, 236, , ,
+remove, 237, , ,
+remove, 238, , ,
+remove, 239, , ,
+insert, 342, 110, 114, 0
+insert, 343, 88, 114, 1
+insert, 344, 77, 114, 2
+insert, 346, 84, 115, 1
+insert, 347, 83, 115, 2
+insert, 348, 81, 116, 0
+insert, 349, 113, 116, 1
+insert, 350, 77, 116, 2
+insert, 352, 80, 117, 1
+insert, 353, 83, 117, 2
+NEW ITERATION, 13, , ,
+NEW ITERATION, 14, , ,
+NEW ITERATION, 15, , ,
+remove, 345, , ,
+remove, 346, , ,
+remove, 347, , ,
+remove, 282, , ,
+remove, 283, , ,
+remove, 284, , ,
+remove, 240, , ,
+remove, 241, , ,
+remove, 242, , ,
+remove, 261, , ,
+remove, 262, , ,
+remove, 263, , ,
+remove, 252, , ,
+remove, 253, , ,
+remove, 254, , ,
+remove, 255, , ,
+remove, 256, , ,
+remove, 257, , ,
+insert, 354, 114, 118, 0
+insert, 355, 94, 118, 1
+insert, 356, 83, 118, 2
+insert, 358, 90, 119, 1
+insert, 359, 89, 119, 2
+insert, 360, 87, 120, 0
+insert, 361, 117, 120, 1
+insert, 362, 83, 120, 2
+insert, 364, 86, 121, 1
+insert, 365, 89, 121, 2
+NEW ITERATION, 16, , ,
+NEW ITERATION, 17, , ,
+NEW ITERATION, 18, , ,
+remove, 357, , ,
+remove, 358, , ,
+remove, 359, , ,
+remove, 300, , ,
+remove, 301, , ,
+remove, 302, , ,
+remove, 258, , ,
+remove, 259, , ,
+remove, 260, , ,
+remove, 279, , ,
+remove, 280, , ,
+remove, 281, , ,
+remove, 270, , ,
+remove, 271, , ,
+remove, 272, , ,
+remove, 273, , ,
+remove, 274, , ,
+remove, 275, , ,
+insert, 366, 118, 122, 0
+insert, 367, 100, 122, 1
+insert, 368, 89, 122, 2
+insert, 370, 96, 123, 1
+insert, 371, 95, 123, 2
+insert, 372, 93, 124, 0
+insert, 373, 121, 124, 1
+insert, 374, 89, 124, 2
+insert, 376, 92, 125, 1
+insert, 377, 95, 125, 2
+NEW ITERATION, 19, , ,
+NEW ITERATION, 20, , ,
+NEW ITERATION, 21, , ,
+remove, 369, , ,
+remove, 370, , ,
+remove, 371, , ,
+remove, 303, , ,
+remove, 304, , ,
+remove, 305, , ,
+remove, 276, , ,
+remove, 277, , ,
+remove, 278, , ,
+remove, 297, , ,
+remove, 298, , ,
+remove, 299, , ,
+remove, 288, , ,
+remove, 289, , ,
+remove, 290, , ,
+remove, 291, , ,
+remove, 292, , ,
+remove, 293, , ,
+insert, 378, 122, 126, 0
+insert, 379, 101, 126, 1
+insert, 380, 95, 126, 2
+insert, 382, 99, 127, 1
+insert, 383, 99, 127, 2
+insert, 384, 99, 128, 0
+insert, 385, 125, 128, 1
+insert, 386, 95, 128, 2
+NEW ITERATION, 22, , ,
+NEW ITERATION, 23, , ,
+NEW ITERATION, 24, , ,
+remove, 381, , ,
+remove, 382, , ,
+remove, 383, , ,
+remove, 375, , ,
+remove, 376, , ,
+remove, 377, , ,
+remove, 285, , ,
+remove, 286, , ,
+remove, 287, , ,
+remove, 387, , ,
+remove, 388, , ,
+remove, 389, , ,
+remove, 384, , ,
+remove, 385, , ,
+remove, 386, , ,
+insert, 390, 126, 130, 0
+insert, 391, 125, 130, 1
+insert, 392, 95, 130, 2
+insert, 393, 124, 131, 0
+insert, 395, 95, 131, 2
+insert, 396, 126, 132, 0
+NEW ITERATION, 25, , ,
+NEW ITERATION, 26, , ,
+remove, 390, , ,
+remove, 391, , ,
+remove, 392, , ,
+remove, 363, , ,
+remove, 364, , ,
+remove, 365, , ,
+remove, 396, , ,
+remove, 397, , ,
+remove, 398, , ,
+remove, 267, , ,
+remove, 268, , ,
+remove, 269, , ,
+remove, 393, , ,
+remove, 394, , ,
+remove, 395, , ,
+remove, 372, , ,
+remove, 373, , ,
+remove, 374, , ,
+insert, 399, 126, 133, 0
+insert, 400, 121, 133, 1
+insert, 401, 132, 133, 2
+insert, 402, 120, 134, 0
+insert, 404, 89, 134, 2
+insert, 405, 126, 135, 0
+insert, 407, 89, 135, 2
+insert, 408, 122, 136, 0
+NEW ITERATION, 27, , ,
+NEW ITERATION, 28, , ,
+remove, 399, , ,
+remove, 400, , ,
+remove, 401, , ,
+remove, 351, , ,
+remove, 352, , ,
+remove, 353, , ,
+remove, 408, , ,
+remove, 409, , ,
+remove, 410, , ,
+remove, 249, , ,
+remove, 250, , ,
+remove, 251, , ,
+remove, 402, , ,
+remove, 403, , ,
+remove, 404, , ,
+remove, 360, , ,
+remove, 361, , ,
+remove, 362, , ,
+insert, 411, 126, 137, 0
+insert, 412, 117, 137, 1
+insert, 413, 135, 137, 2
+insert, 414, 116, 138, 0
+insert, 416, 83, 138, 2
+insert, 417, 122, 139, 0
+insert, 418, 135, 139, 1
+insert, 419, 83, 139, 2
+insert, 420, 118, 140, 0
+NEW ITERATION, 29, , ,
+NEW ITERATION, 30, , ,
+remove, 411, , ,
+remove, 412, , ,
+remove, 413, , ,
+remove, 339, , ,
+remove, 340, , ,
+remove, 341, , ,
+remove, 420, , ,
+remove, 421, , ,
+remove, 422, , ,
+remove, 231, , ,
+remove, 232, , ,
+remove, 233, , ,
+remove, 414, , ,
+remove, 415, , ,
+remove, 416, , ,
+remove, 348, , ,
+remove, 349, , ,
+remove, 350, , ,
+insert, 423, 126, 141, 0
+insert, 424, 113, 141, 1
+insert, 425, 135, 141, 2
+insert, 426, 112, 142, 0
+insert, 428, 77, 142, 2
+insert, 429, 118, 143, 0
+insert, 430, 139, 143, 1
+insert, 431, 77, 143, 2
+insert, 432, 114, 144, 0
+NEW ITERATION, 31, , ,
+NEW ITERATION, 32, , ,
+remove, 423, , ,
+remove, 424, , ,
+remove, 425, , ,
+remove, 327, , ,
+remove, 328, , ,
+remove, 329, , ,
+remove, 432, , ,
+remove, 433, , ,
+remove, 434, , ,
+remove, 213, , ,
+remove, 214, , ,
+remove, 215, , ,
+remove, 426, , ,
+remove, 427, , ,
+remove, 428, , ,
+remove, 336, , ,
+remove, 337, , ,
+remove, 338, , ,
+insert, 435, 126, 145, 0
+insert, 436, 109, 145, 1
+insert, 437, 135, 145, 2
+insert, 438, 108, 146, 0
+insert, 440, 71, 146, 2
+insert, 441, 114, 147, 0
+insert, 442, 143, 147, 1
+insert, 443, 71, 147, 2
+insert, 444, 110, 148, 0
+NEW ITERATION, 33, , ,
+NEW ITERATION, 34, , ,
+remove, 435, , ,
+remove, 436, , ,
+remove, 437, , ,
+remove, 315, , ,
+remove, 316, , ,
+remove, 317, , ,
+remove, 444, , ,
+remove, 445, , ,
+remove, 446, , ,
+remove, 195, , ,
+remove, 196, , ,
+remove, 197, , ,
+remove, 438, , ,
+remove, 439, , ,
+remove, 440, , ,
+remove, 324, , ,
+remove, 325, , ,
+remove, 326, , ,
+insert, 447, 126, 149, 0
+insert, 448, 105, 149, 1
+insert, 449, 135, 149, 2
+insert, 450, 104, 150, 0
+insert, 452, 65, 150, 2
+insert, 453, 110, 151, 0
+insert, 454, 147, 151, 1
+insert, 455, 65, 151, 2
+insert, 456, 106, 152, 0
+NEW ITERATION, 35, , ,
+NEW ITERATION, 36, , ,
+NEW ITERATION, 37, , ,
+remove, 450, , ,
+remove, 451, , ,
+remove, 452, , ,
+remove, 126, , ,
+remove, 127, , ,
+remove, 128, , ,
+remove, 30, , ,
+remove, 31, , ,
+remove, 32, , ,
+remove, 105, , ,
+remove, 106, , ,
+remove, 107, , ,
+remove, 312, , ,
+remove, 313, , ,
+remove, 314, , ,
+remove, 90, , ,
+remove, 91, , ,
+remove, 92, , ,
+insert, 459, 42, 153, 0
+insert, 460, 149, 153, 1
+insert, 461, 152, 153, 2
+insert, 463, 38, 154, 1
+insert, 464, 37, 154, 2
+insert, 465, 14, 155, 0
+insert, 466, 35, 155, 1
+insert, 467, 6, 155, 2
+insert, 469, 34, 156, 1
+insert, 470, 37, 156, 2
+NEW ITERATION, 38, , ,
+remove, 447, , ,
+remove, 448, , ,
+remove, 449, , ,
+remove, 462, , ,
+remove, 463, , ,
+remove, 464, , ,
+remove, 456, , ,
+remove, 457, , ,
+remove, 458, , ,
+remove, 114, , ,
+remove, 115, , ,
+remove, 116, , ,
+remove, 459, , ,
+remove, 460, , ,
+remove, 461, , ,
+remove, 111, , ,
+remove, 112, , ,
+remove, 113, , ,
+insert, 471, 38, 157, 0
+insert, 472, -1, 157, 1
+insert, 473, 154, 157, 2
+insert, 474, 149, 158, 0
+insert, 476, 153, 158, 2
+insert, 477, 126, 159, 0
+insert, 479, 135, 159, 2
+insert, 480, 152, 160, 0
+insert, 482, 153, 160, 2
+insert, 483, 106, 161, 0
+insert, 484, 151, 161, 1
+insert, 486, 39, 162, 0
+insert, 488, 34, 162, 2
+insert, 489, 37, 163, 0
+insert, 493, 34, 164, 1
+insert, 494, 156, 164, 2
+NEW ITERATION, 39, , ,
+NEW ITERATION, 40, , ,
+NEW ITERATION, 41, , ,
+NEW ITERATION, 42, , ,
+remove, 471, , ,
+remove, 472, , ,
+remove, 473, , ,
+remove, 144, , ,
+remove, 145, , ,
+remove, 146, , ,
+remove, 102, , ,
+remove, 103, , ,
+remove, 104, , ,
+remove, 123, , ,
+remove, 124, , ,
+remove, 125, , ,
+remove, 486, , ,
+remove, 487, , ,
+remove, 488, , ,
+remove, 117, , ,
+remove, 118, , ,
+remove, 119, , ,
+insert, 495, 48, 165, 0
+insert, 496, 158, 165, 1
+insert, 497, 160, 165, 2
+insert, 499, 44, 166, 1
+insert, 500, 43, 166, 2
+insert, 501, 41, 167, 0
+insert, 502, 156, 167, 1
+insert, 503, 164, 167, 2
+insert, 505, 40, 168, 1
+insert, 506, 43, 168, 2
+NEW ITERATION, 43, , ,
+remove, 474, , ,
+remove, 475, , ,
+remove, 476, , ,
+remove, 498, , ,
+remove, 499, , ,
+remove, 500, , ,
+remove, 480, , ,
+remove, 481, , ,
+remove, 482, , ,
+remove, 132, , ,
+remove, 133, , ,
+remove, 134, , ,
+remove, 495, , ,
+remove, 496, , ,
+remove, 497, , ,
+remove, 129, , ,
+remove, 130, , ,
+remove, 131, , ,
+insert, 507, 44, 169, 0
+insert, 508, -1, 169, 1
+insert, 509, 166, 169, 2
+insert, 510, 158, 170, 0
+insert, 512, 165, 170, 2
+insert, 513, 159, 171, 0
+insert, 515, 163, 171, 2
+insert, 516, 160, 172, 0
+insert, 518, 165, 172, 2
+insert, 519, 161, 173, 0
+insert, 521, 163, 173, 2
+insert, 522, 45, 174, 0
+insert, 524, 40, 174, 2
+insert, 525, 43, 175, 0
+insert, 529, 40, 176, 1
+insert, 530, 168, 176, 2
+NEW ITERATION, 44, , ,
+NEW ITERATION, 45, , ,
+NEW ITERATION, 46, , ,
+NEW ITERATION, 47, , ,
+remove, 507, , ,
+remove, 508, , ,
+remove, 509, , ,
+remove, 162, , ,
+remove, 163, , ,
+remove, 164, , ,
+remove, 120, , ,
+remove, 121, , ,
+remove, 122, , ,
+remove, 141, , ,
+remove, 142, , ,
+remove, 143, , ,
+remove, 522, , ,
+remove, 523, , ,
+remove, 524, , ,
+remove, 135, , ,
+remove, 136, , ,
+remove, 137, , ,
+insert, 531, 54, 177, 0
+insert, 532, 170, 177, 1
+insert, 533, 172, 177, 2
+insert, 535, 50, 178, 1
+insert, 536, 49, 178, 2
+insert, 537, 47, 179, 0
+insert, 538, 168, 179, 1
+insert, 539, 176, 179, 2
+insert, 541, 46, 180, 1
+insert, 542, 49, 180, 2
+NEW ITERATION, 48, , ,
+remove, 510, , ,
+remove, 511, , ,
+remove, 512, , ,
+remove, 534, , ,
+remove, 535, , ,
+remove, 536, , ,
+remove, 516, , ,
+remove, 517, , ,
+remove, 518, , ,
+remove, 150, , ,
+remove, 151, , ,
+remove, 152, , ,
+remove, 531, , ,
+remove, 532, , ,
+remove, 533, , ,
+remove, 147, , ,
+remove, 148, , ,
+remove, 149, , ,
+insert, 543, 50, 181, 0
+insert, 544, -1, 181, 1
+insert, 545, 178, 181, 2
+insert, 546, 170, 182, 0
+insert, 548, 177, 182, 2
+insert, 549, 171, 183, 0
+insert, 551, 175, 183, 2
+insert, 552, 172, 184, 0
+insert, 554, 177, 184, 2
+insert, 555, 173, 185, 0
+insert, 557, 175, 185, 2
+insert, 558, 51, 186, 0
+insert, 560, 46, 186, 2
+insert, 561, 49, 187, 0
+insert, 565, 46, 188, 1
+insert, 566, 180, 188, 2
+NEW ITERATION, 49, , ,
+NEW ITERATION, 50, , ,
+NEW ITERATION, 51, , ,
+NEW ITERATION, 52, , ,
+remove, 543, , ,
+remove, 544, , ,
+remove, 545, , ,
+remove, 180, , ,
+remove, 181, , ,
+remove, 182, , ,
+remove, 138, , ,
+remove, 139, , ,
+remove, 140, , ,
+remove, 159, , ,
+remove, 160, , ,
+remove, 161, , ,
+remove, 558, , ,
+remove, 559, , ,
+remove, 560, , ,
+remove, 153, , ,
+remove, 154, , ,
+remove, 155, , ,
+insert, 567, 60, 189, 0
+insert, 568, 182, 189, 1
+insert, 569, 184, 189, 2
+insert, 571, 56, 190, 1
+insert, 572, 55, 190, 2
+insert, 573, 53, 191, 0
+insert, 574, 180, 191, 1
+insert, 575, 188, 191, 2
+insert, 577, 52, 192, 1
+insert, 578, 55, 192, 2
+NEW ITERATION, 53, , ,
+remove, 546, , ,
+remove, 547, , ,
+remove, 548, , ,
+remove, 570, , ,
+remove, 571, , ,
+remove, 572, , ,
+remove, 552, , ,
+remove, 553, , ,
+remove, 554, , ,
+remove, 168, , ,
+remove, 169, , ,
+remove, 170, , ,
+remove, 567, , ,
+remove, 568, , ,
+remove, 569, , ,
+remove, 165, , ,
+remove, 166, , ,
+remove, 167, , ,
+insert, 579, 56, 193, 0
+insert, 580, -1, 193, 1
+insert, 581, 190, 193, 2
+insert, 582, 182, 194, 0
+insert, 584, 189, 194, 2
+insert, 585, 183, 195, 0
+insert, 587, 187, 195, 2
+insert, 588, 184, 196, 0
+insert, 590, 189, 196, 2
+insert, 591, 185, 197, 0
+insert, 593, 187, 197, 2
+insert, 594, 57, 198, 0
+insert, 596, 52, 198, 2
+insert, 597, 55, 199, 0
+insert, 601, 52, 200, 1
+insert, 602, 192, 200, 2
+NEW ITERATION, 54, , ,
+NEW ITERATION, 55, , ,
+NEW ITERATION, 56, , ,
+NEW ITERATION, 57, , ,
+remove, 579, , ,
+remove, 580, , ,
+remove, 581, , ,
+remove, 183, , ,
+remove, 184, , ,
+remove, 185, , ,
+remove, 156, , ,
+remove, 157, , ,
+remove, 158, , ,
+remove, 177, , ,
+remove, 178, , ,
+remove, 179, , ,
+remove, 594, , ,
+remove, 595, , ,
+remove, 596, , ,
+remove, 171, , ,
+remove, 172, , ,
+remove, 173, , ,
+insert, 603, 61, 201, 0
+insert, 604, 194, 201, 1
+insert, 605, 196, 201, 2
+insert, 607, 59, 202, 1
+insert, 608, 59, 202, 2
+insert, 609, 59, 203, 0
+insert, 610, 192, 203, 1
+insert, 611, 200, 203, 2
+NEW ITERATION, 58, , ,
+remove, 582, , ,
+remove, 583, , ,
+remove, 584, , ,
+remove, 612, , ,
+remove, 613, , ,
+remove, 614, , ,
+remove, 588, , ,
+remove, 589, , ,
+remove, 590, , ,
+remove, 603, , ,
+remove, 604, , ,
+remove, 605, , ,
+remove, 606, , ,
+remove, 607, , ,
+remove, 608, , ,
+insert, 615, 195, 205, 0
+insert, 616, 204, 205, 1
+insert, 617, 199, 205, 2
+insert, 618, 203, 206, 0
+insert, 620, 196, 206, 2
+insert, 621, 197, 207, 0
+insert, 623, 199, 207, 2
+NEW ITERATION, 59, , ,
+NEW ITERATION, 60, , ,
+remove, 615, , ,
+remove, 616, , ,
+remove, 617, , ,
+remove, 576, , ,
+remove, 577, , ,
+remove, 578, , ,
+remove, 621, , ,
+remove, 622, , ,
+remove, 623, , ,
+remove, 600, , ,
+remove, 601, , ,
+remove, 602, , ,
+remove, 618, , ,
+remove, 619, , ,
+remove, 620, , ,
+remove, 609, , ,
+remove, 610, , ,
+remove, 611, , ,
+insert, 624, 195, 208, 0
+insert, 625, 192, 208, 1
+insert, 626, 199, 208, 2
+insert, 627, 191, 209, 0
+insert, 629, 200, 209, 2
+insert, 630, 197, 210, 0
+insert, 631, 200, 210, 1
+insert, 632, 199, 210, 2
+insert, 633, 199, 211, 0
+NEW ITERATION, 61, , ,
+NEW ITERATION, 62, , ,
+remove, 624, , ,
+remove, 625, , ,
+remove, 626, , ,
+remove, 540, , ,
+remove, 541, , ,
+remove, 542, , ,
+remove, 633, , ,
+remove, 634, , ,
+remove, 635, , ,
+remove, 564, , ,
+remove, 565, , ,
+remove, 566, , ,
+remove, 627, , ,
+remove, 628, , ,
+remove, 629, , ,
+remove, 573, , ,
+remove, 574, , ,
+remove, 575, , ,
+insert, 636, 195, 212, 0
+insert, 637, 180, 212, 1
+insert, 638, 199, 212, 2
+insert, 639, 179, 213, 0
+insert, 641, 188, 213, 2
+insert, 642, 199, 214, 0
+insert, 643, 210, 214, 1
+insert, 644, 188, 214, 2
+insert, 645, 187, 215, 0
+NEW ITERATION, 63, , ,
+NEW ITERATION, 64, , ,
+remove, 636, , ,
+remove, 637, , ,
+remove, 638, , ,
+remove, 504, , ,
+remove, 505, , ,
+remove, 506, , ,
+remove, 645, , ,
+remove, 646, , ,
+remove, 647, , ,
+remove, 528, , ,
+remove, 529, , ,
+remove, 530, , ,
+remove, 639, , ,
+remove, 640, , ,
+remove, 641, , ,
+remove, 537, , ,
+remove, 538, , ,
+remove, 539, , ,
+insert, 648, 195, 216, 0
+insert, 649, 168, 216, 1
+insert, 650, 199, 216, 2
+insert, 651, 167, 217, 0
+insert, 653, 176, 217, 2
+insert, 654, 187, 218, 0
+insert, 655, 214, 218, 1
+insert, 656, 176, 218, 2
+insert, 657, 175, 219, 0
+NEW ITERATION, 65, , ,
+NEW ITERATION, 66, , ,
+remove, 648, , ,
+remove, 649, , ,
+remove, 650, , ,
+remove, 468, , ,
+remove, 469, , ,
+remove, 470, , ,
+remove, 657, , ,
+remove, 658, , ,
+remove, 659, , ,
+remove, 492, , ,
+remove, 493, , ,
+remove, 494, , ,
+remove, 651, , ,
+remove, 652, , ,
+remove, 653, , ,
+remove, 501, , ,
+remove, 502, , ,
+remove, 503, , ,
+insert, 660, 195, 220, 0
+insert, 661, 156, 220, 1
+insert, 662, 199, 220, 2
+insert, 663, 155, 221, 0
+insert, 665, 164, 221, 2
+insert, 666, 175, 222, 0
+insert, 667, 218, 222, 1
+insert, 668, 164, 222, 2
+insert, 669, 163, 223, 0
+NEW ITERATION, 67, , ,
+NEW ITERATION, 68, , ,
+NEW ITERATION, 69, , ,
+remove, 663, , ,
+remove, 664, , ,
+remove, 665, , ,
+remove, 78, , ,
+remove, 79, , ,
+remove, 80, , ,
+remove, 18, , ,
+remove, 19, , ,
+remove, 20, , ,
+remove, 57, , ,
+remove, 58, , ,
+remove, 59, , ,
+remove, 465, , ,
+remove, 466, , ,
+remove, 467, , ,
+remove, 42, , ,
+remove, 43, , ,
+remove, 44, , ,
+insert, 672, 26, 224, 0
+insert, 673, 220, 224, 1
+insert, 674, 223, 224, 2
+insert, 676, 22, 225, 1
+insert, 677, 21, 225, 2
+insert, 678, 7, 226, 0
+insert, 679, 19, 226, 1
+insert, 680, 5, 226, 2
+insert, 682, 18, 227, 1
+insert, 683, 21, 227, 2
+NEW ITERATION, 70, , ,
+remove, 660, , ,
+remove, 661, , ,
+remove, 662, , ,
+remove, 675, , ,
+remove, 676, , ,
+remove, 677, , ,
+remove, 669, , ,
+remove, 670, , ,
+remove, 671, , ,
+remove, 66, , ,
+remove, 67, , ,
+remove, 68, , ,
+remove, 672, , ,
+remove, 673, , ,
+remove, 674, , ,
+remove, 63, , ,
+remove, 64, , ,
+remove, 65, , ,
+insert, 684, 22, 228, 0
+insert, 685, -1, 228, 1
+insert, 686, 225, 228, 2
+insert, 687, 220, 229, 0
+insert, 689, 224, 229, 2
+insert, 690, 195, 230, 0
+insert, 692, 199, 230, 2
+insert, 693, 223, 231, 0
+insert, 695, 224, 231, 2
+insert, 696, 163, 232, 0
+insert, 697, 222, 232, 1
+insert, 699, 23, 233, 0
+insert, 701, 18, 233, 2
+insert, 702, 21, 234, 0
+insert, 706, 18, 235, 1
+insert, 707, 227, 235, 2
+NEW ITERATION, 71, , ,
+NEW ITERATION, 72, , ,
+NEW ITERATION, 73, , ,
+NEW ITERATION, 74, , ,
+remove, 684, , ,
+remove, 685, , ,
+remove, 686, , ,
+remove, 96, , ,
+remove, 97, , ,
+remove, 98, , ,
+remove, 54, , ,
+remove, 55, , ,
+remove, 56, , ,
+remove, 75, , ,
+remove, 76, , ,
+remove, 77, , ,
+remove, 699, , ,
+remove, 700, , ,
+remove, 701, , ,
+remove, 69, , ,
+remove, 70, , ,
+remove, 71, , ,
+insert, 708, 32, 236, 0
+insert, 709, 229, 236, 1
+insert, 710, 231, 236, 2
+insert, 712, 28, 237, 1
+insert, 713, 27, 237, 2
+insert, 714, 25, 238, 0
+insert, 715, 227, 238, 1
+insert, 716, 235, 238, 2
+insert, 718, 24, 239, 1
+insert, 719, 27, 239, 2
+NEW ITERATION, 75, , ,
+remove, 687, , ,
+remove, 688, , ,
+remove, 689, , ,
+remove, 711, , ,
+remove, 712, , ,
+remove, 713, , ,
+remove, 693, , ,
+remove, 694, , ,
+remove, 695, , ,
+remove, 84, , ,
+remove, 85, , ,
+remove, 86, , ,
+remove, 708, , ,
+remove, 709, , ,
+remove, 710, , ,
+remove, 81, , ,
+remove, 82, , ,
+remove, 83, , ,
+insert, 720, 28, 240, 0
+insert, 721, -1, 240, 1
+insert, 722, 237, 240, 2
+insert, 723, 229, 241, 0
+insert, 725, 236, 241, 2
+insert, 726, 230, 242, 0
+insert, 728, 234, 242, 2
+insert, 729, 231, 243, 0
+insert, 731, 236, 243, 2
+insert, 732, 232, 244, 0
+insert, 734, 234, 244, 2
+insert, 735, 29, 245, 0
+insert, 737, 24, 245, 2
+insert, 738, 27, 246, 0
+insert, 742, 24, 247, 1
+insert, 743, 239, 247, 2
+NEW ITERATION, 76, , ,
+NEW ITERATION, 77, , ,
+NEW ITERATION, 78, , ,
+NEW ITERATION, 79, , ,
+remove, 720, , ,
+remove, 721, , ,
+remove, 722, , ,
+remove, 99, , ,
+remove, 100, , ,
+remove, 101, , ,
+remove, 72, , ,
+remove, 73, , ,
+remove, 74, , ,
+remove, 93, , ,
+remove, 94, , ,
+remove, 95, , ,
+remove, 735, , ,
+remove, 736, , ,
+remove, 737, , ,
+remove, 87, , ,
+remove, 88, , ,
+remove, 89, , ,
+insert, 744, 33, 248, 0
+insert, 745, 241, 248, 1
+insert, 746, 243, 248, 2
+insert, 748, 31, 249, 1
+insert, 749, 31, 249, 2
+insert, 750, 31, 250, 0
+insert, 751, 239, 250, 1
+insert, 752, 247, 250, 2
+NEW ITERATION, 80, , ,
+remove, 723, , ,
+remove, 724, , ,
+remove, 725, , ,
+remove, 753, , ,
+remove, 754, , ,
+remove, 755, , ,
+remove, 729, , ,
+remove, 730, , ,
+remove, 731, , ,
+remove, 744, , ,
+remove, 745, , ,
+remove, 746, , ,
+remove, 747, , ,
+remove, 748, , ,
+remove, 749, , ,
+insert, 756, 242, 252, 0
+insert, 757, 251, 252, 1
+insert, 758, 246, 252, 2
+insert, 759, 250, 253, 0
+insert, 761, 243, 253, 2
+insert, 762, 244, 254, 0
+insert, 764, 246, 254, 2
+NEW ITERATION, 81, , ,
+NEW ITERATION, 82, , ,
+remove, 756, , ,
+remove, 757, , ,
+remove, 758, , ,
+remove, 717, , ,
+remove, 718, , ,
+remove, 719, , ,
+remove, 762, , ,
+remove, 763, , ,
+remove, 764, , ,
+remove, 741, , ,
+remove, 742, , ,
+remove, 743, , ,
+remove, 759, , ,
+remove, 760, , ,
+remove, 761, , ,
+remove, 750, , ,
+remove, 751, , ,
+remove, 752, , ,
+insert, 765, 242, 255, 0
+insert, 766, 239, 255, 1
+insert, 767, 246, 255, 2
+insert, 768, 238, 256, 0
+insert, 770, 247, 256, 2
+insert, 771, 244, 257, 0
+insert, 772, 247, 257, 1
+insert, 773, 246, 257, 2
+insert, 774, 246, 258, 0
+NEW ITERATION, 83, , ,
+NEW ITERATION, 84, , ,
+remove, 765, , ,
+remove, 766, , ,
+remove, 767, , ,
+remove, 681, , ,
+remove, 682, , ,
+remove, 683, , ,
+remove, 774, , ,
+remove, 775, , ,
+remove, 776, , ,
+remove, 705, , ,
+remove, 706, , ,
+remove, 707, , ,
+remove, 768, , ,
+remove, 769, , ,
+remove, 770, , ,
+remove, 714, , ,
+remove, 715, , ,
+remove, 716, , ,
+insert, 777, 242, 259, 0
+insert, 778, 227, 259, 1
+insert, 779, 246, 259, 2
+insert, 780, 226, 260, 0
+insert, 782, 235, 260, 2
+insert, 783, 246, 261, 0
+insert, 784, 257, 261, 1
+insert, 785, 235, 261, 2
+insert, 786, 234, 262, 0
+NEW ITERATION, 85, , ,
+NEW ITERATION, 86, , ,
+NEW ITERATION, 87, , ,
+remove, 780, , ,
+remove, 781, , ,
+remove, 782, , ,
+remove, 48, , ,
+remove, 49, , ,
+remove, 50, , ,
+remove, 15, , ,
+remove, 16, , ,
+remove, 17, , ,
+remove, 27, , ,
+remove, 28, , ,
+remove, 29, , ,
+remove, 678, , ,
+remove, 679, , ,
+remove, 680, , ,
+remove, 21, , ,
+remove, 22, , ,
+remove, 23, , ,
+insert, 789, 16, 263, 0
+insert, 790, 259, 263, 1
+insert, 791, 262, 263, 2
+insert, 793, 12, 264, 1
+insert, 794, 11, 264, 2
+insert, 795, 9, 265, 0
+insert, 796, 3, 265, 1
+insert, 797, 3, 265, 2
+insert, 799, 8, 266, 1
+insert, 800, 11, 266, 2
+NEW ITERATION, 88, , ,
+remove, 777, , ,
+remove, 778, , ,
+remove, 779, , ,
+remove, 792, , ,
+remove, 793, , ,
+remove, 794, , ,
+remove, 786, , ,
+remove, 787, , ,
+remove, 788, , ,
+remove, 36, , ,
+remove, 37, , ,
+remove, 38, , ,
+remove, 789, , ,
+remove, 790, , ,
+remove, 791, , ,
+remove, 33, , ,
+remove, 34, , ,
+remove, 35, , ,
+insert, 801, 12, 267, 0
+insert, 802, -1, 267, 1
+insert, 803, 264, 267, 2
+insert, 804, 259, 268, 0
+insert, 806, 263, 268, 2
+insert, 807, 242, 269, 0
+insert, 809, 246, 269, 2
+insert, 810, 262, 270, 0
+insert, 812, 263, 270, 2
+insert, 813, 234, 271, 0
+insert, 814, 261, 271, 1
+insert, 816, 13, 272, 0
+insert, 818, 8, 272, 2
+insert, 819, 11, 273, 0
+insert, 823, 8, 274, 1
+insert, 824, 266, 274, 2
+NEW ITERATION, 89, , ,
+NEW ITERATION, 90, , ,
+NEW ITERATION, 91, , ,
+NEW ITERATION, 92, , ,
+remove, 801, , ,
+remove, 802, , ,
+remove, 803, , ,
+remove, 51, , ,
+remove, 52, , ,
+remove, 53, , ,
+remove, 24, , ,
+remove, 25, , ,
+remove, 26, , ,
+remove, 45, , ,
+remove, 46, , ,
+remove, 47, , ,
+remove, 816, , ,
+remove, 817, , ,
+remove, 818, , ,
+remove, 39, , ,
+remove, 40, , ,
+remove, 41, , ,
+insert, 825, 17, 275, 0
+insert, 826, 268, 275, 1
+insert, 827, 270, 275, 2
+insert, 829, 15, 276, 1
+insert, 830, 15, 276, 2
+insert, 831, 15, 277, 0
+insert, 832, 266, 277, 1
+insert, 833, 274, 277, 2
+NEW ITERATION, 93, , ,
+remove, 804, , ,
+remove, 805, , ,
+remove, 806, , ,
+remove, 834, , ,
+remove, 835, , ,
+remove, 836, , ,
+remove, 810, , ,
+remove, 811, , ,
+remove, 812, , ,
+remove, 825, , ,
+remove, 826, , ,
+remove, 827, , ,
+remove, 828, , ,
+remove, 829, , ,
+remove, 830, , ,
+insert, 837, 269, 279, 0
+insert, 838, 278, 279, 1
+insert, 839, 273, 279, 2
+insert, 840, 277, 280, 0
+insert, 842, 270, 280, 2
+insert, 843, 271, 281, 0
+insert, 845, 273, 281, 2
+NEW ITERATION, 94, , ,
+NEW ITERATION, 95, , ,
+remove, 837, , ,
+remove, 838, , ,
+remove, 839, , ,
+remove, 798, , ,
+remove, 799, , ,
+remove, 800, , ,
+remove, 843, , ,
+remove, 844, , ,
+remove, 845, , ,
+remove, 822, , ,
+remove, 823, , ,
+remove, 824, , ,
+remove, 840, , ,
+remove, 841, , ,
+remove, 842, , ,
+remove, 831, , ,
+remove, 832, , ,
+remove, 833, , ,
+insert, 846, 269, 282, 0
+insert, 847, 266, 282, 1
+insert, 848, 273, 282, 2
+insert, 849, 265, 283, 0
+insert, 851, 274, 283, 2
+insert, 852, 271, 284, 0
+insert, 853, 274, 284, 1
+insert, 854, 273, 284, 2
+insert, 855, 273, 285, 0
+NEW ITERATION, 96, , ,
+NEW ITERATION, 97, , ,
+remove, 846, , ,
+remove, 847, , ,
+remove, 848, , ,
+remove, 9, , ,
+remove, 10, , ,
+remove, 11, , ,
+remove, 855, , ,
+remove, 856, , ,
+remove, 857, , ,
+remove, 849, , ,
+remove, 850, , ,
+remove, 851, , ,
+remove, 795, , ,
+remove, 796, , ,
+remove, 797, , ,
+insert, 858, 269, 286, 0
+insert, 859, 3, 286, 1
+insert, 860, 273, 286, 2
+insert, 861, 102, 287, 0
+insert, 863, 285, 287, 2
+insert, 864, 273, 288, 0
+insert, 865, 284, 288, 1
+NEW ITERATION, 98, , ,
+NEW ITERATION, 99, , ,
+NEW ITERATION, 100, , ,
+NEW ITERATION, 101, , ,
+remove, 858, , ,
+remove, 859, , ,
+remove, 860, , ,
+remove, 852, , ,
+remove, 853, , ,
+remove, 854, , ,
+remove, 861, , ,
+remove, 862, , ,
+remove, 863, , ,
+remove, 819, , ,
+remove, 820, , ,
+remove, 821, , ,
+remove, 864, , ,
+remove, 865, , ,
+remove, 866, , ,
+insert, 867, 269, 289, 0
+insert, 868, 287, 289, 1
+insert, 869, 284, 289, 2
+insert, 870, 271, 290, 0
+insert, 872, 287, 290, 2
+insert, 873, 102, 291, 0
+NEW ITERATION, 102, , ,
+NEW ITERATION, 103, , ,
+NEW ITERATION, 104, , ,
+remove, 783, , ,
+remove, 784, , ,
+remove, 785, , ,
+remove, 726, , ,
+remove, 727, , ,
+remove, 728, , ,
+remove, 870, , ,
+remove, 871, , ,
+remove, 872, , ,
+remove, 732, , ,
+remove, 733, , ,
+remove, 734, , ,
+remove, 813, , ,
+remove, 814, , ,
+remove, 815, , ,
+remove, 702, , ,
+remove, 703, , ,
+remove, 704, , ,
+insert, 876, 246, 292, 0
+insert, 877, 257, 292, 1
+insert, 878, 242, 292, 2
+insert, 879, 230, 293, 0
+insert, 880, 269, 293, 1
+insert, 882, 244, 294, 0
+insert, 883, 289, 294, 1
+insert, 884, 291, 294, 2
+insert, 885, 232, 295, 0
+insert, 886, 257, 295, 1
+NEW ITERATION, 105, , ,
+NEW ITERATION, 106, , ,
+NEW ITERATION, 107, , ,
+remove, 666, , ,
+remove, 667, , ,
+remove, 668, , ,
+remove, 513, , ,
+remove, 514, , ,
+remove, 515, , ,
+remove, 885, , ,
+remove, 886, , ,
+remove, 887, , ,
+remove, 519, , ,
+remove, 520, , ,
+remove, 521, , ,
+remove, 696, , ,
+remove, 697, , ,
+remove, 698, , ,
+remove, 489, , ,
+remove, 490, , ,
+remove, 491, , ,
+insert, 888, 175, 296, 0
+insert, 889, 218, 296, 1
+insert, 890, 171, 296, 2
+insert, 891, 159, 297, 0
+insert, 892, 183, 297, 1
+insert, 894, 173, 298, 0
+insert, 895, 257, 298, 1
+insert, 896, 294, 298, 2
+insert, 897, 161, 299, 0
+insert, 898, 185, 299, 1
+NEW ITERATION, 108, , ,
+NEW ITERATION, 109, , ,
+NEW ITERATION, 110, , ,
+NEW ITERATION, 111, , ,
+NEW ITERATION, 112, , ,
+NEW ITERATION, 113, , ,
+remove, 807, , ,
+remove, 808, , ,
+remove, 809, , ,
+remove, 771, , ,
+remove, 772, , ,
+remove, 773, , ,
+remove, 879, , ,
+remove, 880, , ,
+remove, 881, , ,
+remove, 738, , ,
+remove, 739, , ,
+remove, 740, , ,
+remove, 876, , ,
+remove, 877, , ,
+remove, 878, , ,
+insert, 900, 293, 300, 0
+insert, 901, 289, 300, 1
+insert, 902, 257, 300, 2
+insert, 903, 298, 301, 0
+insert, 905, 293, 301, 2
+insert, 906, 230, 302, 0
+NEW ITERATION, 114, , ,
+NEW ITERATION, 115, , ,
+NEW ITERATION, 116, , ,
+NEW ITERATION, 117, , ,
+NEW ITERATION, 118, , ,
+NEW ITERATION, 119, , ,
+NEW ITERATION, 120, , ,
+NEW ITERATION, 121, , ,
+NEW ITERATION, 122, , ,
+NEW ITERATION, 123, , ,
+NEW ITERATION, 124, , ,
+NEW ITERATION, 125, , ,
+NEW ITERATION, 126, , ,
+NEW ITERATION, 127, , ,
+remove, 690, , ,
+remove, 691, , ,
+remove, 692, , ,
+remove, 630, , ,
+remove, 631, , ,
+remove, 632, , ,
+remove, 654, , ,
+remove, 655, , ,
+remove, 656, , ,
+remove, 597, , ,
+remove, 598, , ,
+remove, 599, , ,
+remove, 642, , ,
+remove, 643, , ,
+remove, 644, , ,
+insert, 909, 195, 303, 0
+insert, 910, 302, 303, 1
+insert, 911, 210, 303, 2
+insert, 912, 197, 304, 0
+insert, 914, 218, 304, 2
+insert, 915, 187, 305, 0
+insert, 917, 296, 305, 2
+NEW ITERATION, 128, , ,
+NEW ITERATION, 129, , ,
+NEW ITERATION, 130, , ,
+NEW ITERATION, 131, , ,
+NEW ITERATION, 132, , ,
+NEW ITERATION, 133, , ,
+NEW ITERATION, 134, , ,
+NEW ITERATION, 135, , ,
+NEW ITERATION, 136, , ,
+remove, 585, , ,
+remove, 586, , ,
+remove, 587, , ,
+remove, 912, , ,
+remove, 913, , ,
+remove, 914, , ,
+remove, 591, , ,
+remove, 592, , ,
+remove, 593, , ,
+remove, 888, , ,
+remove, 889, , ,
+remove, 890, , ,
+remove, 561, , ,
+remove, 562, , ,
+remove, 563, , ,
+remove, 915, , ,
+remove, 916, , ,
+remove, 917, , ,
+insert, 918, 183, 306, 0
+insert, 919, 303, 306, 1
+insert, 920, 304, 306, 2
+insert, 921, 197, 307, 0
+insert, 922, 303, 307, 1
+insert, 924, 185, 308, 0
+insert, 926, 296, 308, 2
+insert, 927, 175, 309, 0
+insert, 929, 297, 309, 2
+NEW ITERATION, 137, , ,
+NEW ITERATION, 138, , ,
+NEW ITERATION, 139, , ,
+NEW ITERATION, 140, , ,
+NEW ITERATION, 141, , ,
+NEW ITERATION, 142, , ,
+NEW ITERATION, 143, , ,
+NEW ITERATION, 144, , ,
+NEW ITERATION, 145, , ,
+remove, 549, , ,
+remove, 550, , ,
+remove, 551, , ,
+remove, 924, , ,
+remove, 925, , ,
+remove, 926, , ,
+remove, 555, , ,
+remove, 556, , ,
+remove, 557, , ,
+remove, 891, , ,
+remove, 892, , ,
+remove, 893, , ,
+remove, 525, , ,
+remove, 526, , ,
+remove, 527, , ,
+remove, 927, , ,
+remove, 928, , ,
+remove, 929, , ,
+insert, 930, 297, 310, 0
+insert, 931, 306, 310, 1
+insert, 932, 308, 310, 2
+insert, 933, 185, 311, 0
+insert, 934, 307, 311, 1
+insert, 936, 299, 312, 0
+insert, 938, 297, 312, 2
+insert, 939, 159, 313, 0
+NEW ITERATION, 146, , ,
+NEW ITERATION, 147, , ,
+NEW ITERATION, 148, , ,
+NEW ITERATION, 149, , ,
+NEW ITERATION, 150, , ,
+NEW ITERATION, 151, , ,
+NEW ITERATION, 152, , ,
+NEW ITERATION, 153, , ,
+NEW ITERATION, 154, , ,
+NEW ITERATION, 155, , ,
+NEW ITERATION, 156, , ,
+NEW ITERATION, 157, , ,
+NEW ITERATION, 158, , ,
+NEW ITERATION, 159, , ,
+NEW ITERATION, 160, , ,
+NEW ITERATION, 161, , ,
+NEW ITERATION, 162, , ,
+NEW ITERATION, 163, , ,
+NEW ITERATION, 164, , ,
+NEW ITERATION, 165, , ,
+NEW ITERATION, 166, , ,
+NEW ITERATION, 167, , ,
+NEW ITERATION, 168, , ,
+NEW ITERATION, 169, , ,
+NEW ITERATION, 170, , ,
+NEW ITERATION, 171, , ,
+NEW ITERATION, 172, , ,
+NEW ITERATION, 173, , ,
+NEW ITERATION, 174, , ,
+NEW ITERATION, 175, , ,
+NEW ITERATION, 176, , ,
+NEW ITERATION, 177, , ,
+NEW ITERATION, 178, , ,
+NEW ITERATION, 179, , ,
+NEW ITERATION, 180, , ,
+NEW ITERATION, 181, , ,
+NEW ITERATION, 182, , ,
+NEW ITERATION, 183, , ,
+NEW ITERATION, 184, , ,
+NEW ITERATION, 185, , ,
+NEW ITERATION, 186, , ,
+NEW ITERATION, 187, , ,
+NEW ITERATION, 188, , ,
+NEW ITERATION, 189, , ,
+NEW ITERATION, 190, , ,
+NEW ITERATION, 191, , ,
+NEW ITERATION, 192, , ,
+NEW ITERATION, 193, , ,
+NEW ITERATION, 194, , ,
+NEW ITERATION, 195, , ,
+NEW ITERATION, 196, , ,
+NEW ITERATION, 197, , ,
+NEW ITERATION, 198, , ,
+NEW ITERATION, 199, , ,
+NEW ITERATION, 200, , ,
+NEW ITERATION, 201, , ,
+NEW ITERATION, 202, , ,
+NEW ITERATION, 203, , ,
+NEW ITERATION, 204, , ,
+NEW ITERATION, 205, , ,
+NEW ITERATION, 206, , ,
+NEW ITERATION, 207, , ,
+NEW ITERATION, 208, , ,
+NEW ITERATION, 209, , ,
+NEW ITERATION, 210, , ,
+NEW ITERATION, 211, , ,
+NEW ITERATION, 212, , ,
+NEW ITERATION, 213, , ,
+NEW ITERATION, 214, , ,
+NEW ITERATION, 215, , ,
+NEW ITERATION, 216, , ,
+NEW ITERATION, 217, , ,
+NEW ITERATION, 218, , ,
+NEW ITERATION, 219, , ,
+NEW ITERATION, 220, , ,
+NEW ITERATION, 221, , ,
+NEW ITERATION, 222, , ,
+NEW ITERATION, 223, , ,
+NEW ITERATION, 224, , ,
+NEW ITERATION, 225, , ,
+NEW ITERATION, 226, , ,
+NEW ITERATION, 227, , ,
+NEW ITERATION, 228, , ,
+NEW ITERATION, 229, , ,
+NEW ITERATION, 230, , ,
+NEW ITERATION, 231, , ,
+NEW ITERATION, 232, , ,
+NEW ITERATION, 233, , ,
+NEW ITERATION, 234, , ,
+NEW ITERATION, 235, , ,
+NEW ITERATION, 236, , ,
+NEW ITERATION, 237, , ,
+NEW ITERATION, 238, , ,
+NEW ITERATION, 239, , ,
+NEW ITERATION, 240, , ,
+NEW ITERATION, 241, , ,
+NEW ITERATION, 242, , ,
+NEW ITERATION, 243, , ,
+NEW ITERATION, 244, , ,
+NEW ITERATION, 245, , ,
+NEW ITERATION, 246, , ,
+NEW ITERATION, 247, , ,
+NEW ITERATION, 248, , ,
+NEW ITERATION, 249, , ,
+NEW ITERATION, 250, , ,
+NEW ITERATION, 251, , ,
+NEW ITERATION, 252, , ,
+NEW ITERATION, 253, , ,
+NEW ITERATION, 254, , ,
+NEW ITERATION, 255, , ,
+NEW ITERATION, 256, , ,
+NEW ITERATION, 257, , ,
+NEW ITERATION, 258, , ,
+NEW ITERATION, 259, , ,
+NEW ITERATION, 260, , ,
+NEW ITERATION, 261, , ,
+NEW ITERATION, 262, , ,
+NEW ITERATION, 263, , ,
+NEW ITERATION, 264, , ,
+NEW ITERATION, 265, , ,
+NEW ITERATION, 266, , ,
+NEW ITERATION, 267, , ,
+NEW ITERATION, 268, , ,
+NEW ITERATION, 269, , ,
+NEW ITERATION, 270, , ,
+NEW ITERATION, 271, , ,
+NEW ITERATION, 272, , ,
+NEW ITERATION, 273, , ,
+NEW ITERATION, 274, , ,
+NEW ITERATION, 275, , ,
+NEW ITERATION, 276, , ,
+NEW ITERATION, 277, , ,
+NEW ITERATION, 278, , ,
+NEW ITERATION, 279, , ,
+NEW ITERATION, 280, , ,
+NEW ITERATION, 281, , ,
+NEW ITERATION, 282, , ,
+NEW ITERATION, 283, , ,
+NEW ITERATION, 284, , ,
+NEW ITERATION, 285, , ,
+NEW ITERATION, 286, , ,
+NEW ITERATION, 287, , ,
+NEW ITERATION, 288, , ,
+NEW ITERATION, 289, , ,
+NEW ITERATION, 290, , ,
+NEW ITERATION, 291, , ,
+NEW ITERATION, 292, , ,
+NEW ITERATION, 293, , ,
+NEW ITERATION, 294, , ,
+NEW ITERATION, 295, , ,
+NEW ITERATION, 296, , ,
+NEW ITERATION, 297, , ,
+NEW ITERATION, 298, , ,
+NEW ITERATION, 299, , ,
+NEW ITERATION, 300, , ,
+NEW ITERATION, 301, , ,
+NEW ITERATION, 302, , ,
+NEW ITERATION, 303, , ,
+NEW ITERATION, 304, , ,
+NEW ITERATION, 305, , ,
+NEW ITERATION, 306, , ,
+NEW ITERATION, 307, , ,
+NEW ITERATION, 308, , ,
+NEW ITERATION, 309, , ,
+NEW ITERATION, 310, , ,
+NEW ITERATION, 311, , ,
+NEW ITERATION, 312, , ,
+NEW ITERATION, 313, , ,
+NEW ITERATION, 314, , ,
+NEW ITERATION, 315, , ,
+NEW ITERATION, 316, , ,
+NEW ITERATION, 317, , ,
+NEW ITERATION, 318, , ,
+NEW ITERATION, 319, , ,
+NEW ITERATION, 320, , ,
+NEW ITERATION, 321, , ,
+NEW ITERATION, 322, , ,
+NEW ITERATION, 323, , ,
+NEW ITERATION, 324, , ,
+NEW ITERATION, 325, , ,
+NEW ITERATION, 326, , ,
+NEW ITERATION, 327, , ,
+NEW ITERATION, 328, , ,
+NEW ITERATION, 329, , ,
+NEW ITERATION, 330, , ,
+NEW ITERATION, 331, , ,
+NEW ITERATION, 332, , ,
+NEW ITERATION, 333, , ,
+NEW ITERATION, 334, , ,
+NEW ITERATION, 335, , ,
+NEW ITERATION, 336, , ,
+NEW ITERATION, 337, , ,
+NEW ITERATION, 338, , ,
+NEW ITERATION, 339, , ,
+NEW ITERATION, 340, , ,
+NEW ITERATION, 341, , ,
+NEW ITERATION, 342, , ,
+NEW ITERATION, 343, , ,
+NEW ITERATION, 344, , ,
+NEW ITERATION, 345, , ,
+NEW ITERATION, 346, , ,
+NEW ITERATION, 347, , ,
+NEW ITERATION, 348, , ,
