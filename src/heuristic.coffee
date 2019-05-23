@@ -263,7 +263,7 @@ readCSV = (file) ->
       e++
     yield t
 
-state = new State readCSV '../data/ImgZen'
+state = new State readCSV '../data/Nat/27f'
 
 i=0
 for graph from state.iter()

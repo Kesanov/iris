@@ -43,8 +43,8 @@ addLine = (s, t) ->
 
 
 main = () ->
-  basegl.fontManager.register 'SourceCodePro', 'fonts/SourceCodePro.ttf'
-  await basegl.fontManager.load 'SourceCodePro'
+#  basegl.fontManager.register 'SourceCodePro', 'fonts/SourceCodePro.ttf'
+#  await basegl.fontManager.load 'SourceCodePro'
 
   new KeyboardMouseReactor scene
 
