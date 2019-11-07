@@ -24,6 +24,6 @@
     "bluebird": "^3.5.2",
     "glslify-loader": "^1.0.2",
     "raw-loader": "^0.5.1",
-    "webpack-dev-server": "^2.11.3"
+    "webpack-dev-server": "^3.1.11"
   }
 }
