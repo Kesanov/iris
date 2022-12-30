@@ -13,10 +13,10 @@
   },
   "devDependencies": {
     "@luna-lang/jsnext": "^0.0.10",
-    "coffee-loader": "^0.9.0",
+    "coffee-loader": "^4.0.0",
     "coffeescript": "2.4.0",
     "gl-matrix": "^2.8.1",
-    "webpack": "^3.12.0"
+    "webpack": "^5.75.0"
   },
   "dependencies": {
     "luna-logger": "^0.1.5",
