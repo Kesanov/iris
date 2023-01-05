@@ -16,7 +16,7 @@
     "coffee-loader": "^0.9.0",
     "coffeescript": "2.4.0",
     "gl-matrix": "^2.8.1",
-    "webpack": "^3.12.0"
+    "webpack": "^5.75.0"
   },
   "dependencies": {
     "luna-logger": "^0.1.5",
